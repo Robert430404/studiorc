@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/add-work';
 
     /**
      * Create a new authentication controller instance.
@@ -68,5 +68,25 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * Redirect to the homepage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return redirect('/');
+    }
+
+    /**
+     * Redirect to the homepage.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function register()
+    {
+        return redirect('/');
     }
 }

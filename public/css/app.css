@@ -1,4 +1,5 @@
 body {
+  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png");
   color: #000;
   font-family: "Raleway", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica", sans-serif; }
 
@@ -73,7 +74,7 @@ a:hover {
 
 .introduction {
   position: relative;
-  background: #ecedee;
+  background: #ffffff;
   margin-bottom: 100px;
   padding: 40px 0 0;
   box-sizing: border-box; }
@@ -83,9 +84,9 @@ a:hover {
     bottom: -20%;
     left: 0;
     z-index: 9;
-    width: 100%;
+    width: 110%;
     height: 100%;
-    background: #ecedee;
+    background: #ffffff;
     display: block;
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg); }
@@ -134,11 +135,55 @@ a:hover {
             text-shadow: 0px 2px 4px #4b4b4b; }
 
 .examples {
-  background: transparent; }
+  background: transparent;
+  margin-bottom: 120px; }
   .examples .heading {
     font-family: "Oswald", sans-serif;
     font-size: 64px;
     font-weight: 400;
     text-transform: uppercase; }
+
+.about {
+  position: relative;
+  background: #3bad35;
+  margin-bottom: 120px; }
+  .about:before {
+    content: ' ';
+    position: absolute;
+    top: -20%;
+    left: -5%;
+    z-index: 9;
+    width: 110%;
+    height: 100%;
+    background: #3bad35;
+    display: block;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  .about:after {
+    content: ' ';
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    z-index: 9;
+    width: 110%;
+    height: 100%;
+    background: #3bad35;
+    display: block;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  .about .heading {
+    position: relative;
+    z-index: 99;
+    font-family: "Oswald", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: #ecedee;
+    text-transform: uppercase; }
+  .about p {
+    position: relative;
+    z-index: 99;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ecedee; }
 
 /*# sourceMappingURL=app.css.map */

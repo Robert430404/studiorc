@@ -21,7 +21,26 @@
     </div>
 
     <div class="about">
-
+        <h2 class="aligncenter heading">Who I Am</h2>
+        <div class="row">
+            <div class="columns large-8 medium-6 small-12">
+                <p>
+                    I am a passionate developer living in Las Vegas, NV. Bringing amazing user experiences to people through the web is what makes me get up in the morning and go to work.
+                </p>
+                <p>
+                    Being able to work with the latest technologies, whether thats PHP 7 in Laravel or using Babel to create interactive user interfaces with ES6, really excites me.
+                </p>
+                <p>
+                    I specialize in PHP and JavaScript development, and have skills in a variety of different frameworks. I have built user portals in Laravel and I've also made Hybrid Mobile Applications in Ionic.
+                </p>
+                <p>
+                    No matter what I will find a way to create an elegant, maintainable, and updatable solution to any problem that comes my way.
+                </p>
+            </div>
+            <div class="columns large-4 medium-6 small-12">
+                <img src="https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/robert-cox-headshot.jpg" />
+            </div>
+        </div>
     </div>
 
     <div class="contact">

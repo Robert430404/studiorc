@@ -1,15 +1,17 @@
 // Color Variables
 $white: #ffffff;
 $off-white: #ecedee;
-$highlight: #3bad35;
+$light-grey: #ccc;
 $grey: #4b4b4b;
 $black: #000;
+$highlight: #3bad35;
 
 $font-family: 'Raleway', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 $alt-font-family: 'Oswald', sans-serif;
 
 // Tag Styles
 body {
+    background: $light-grey url('https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png');
     color: $black;
     font-family: $font-family;
 }
@@ -101,7 +103,7 @@ a:hover {
 
 .introduction {
     position: relative;
-    background: $off-white;
+    background: $white;
     margin-bottom: 100px;
     padding: 40px 0 0;
     box-sizing: border-box;
@@ -111,9 +113,9 @@ a:hover {
         bottom: -20%;
         left: 0;
         z-index: 9;
-        width: 100%;
+        width: 110%;
         height: 100%;
-        background: $off-white;
+        background: $white;
         display: block;
         transform: rotate(2deg);
     }
@@ -172,10 +174,57 @@ a:hover {
 
 .examples {
     background: transparent;
+    margin-bottom: 120px;
     .heading {
         font-family: $alt-font-family;
         font-size: 64px;
         font-weight: 400;
         text-transform: uppercase;
+    }
+}
+
+.about {
+    position: relative;
+    background: $highlight;
+    margin-bottom: 120px;
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: -20%;
+        left: -5%;
+        z-index: 9;
+        width: 110%;
+        height: 100%;
+        background: $highlight;
+        display: block;
+        transform: rotate(2deg);
+    }
+    &:after {
+        content: ' ';
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        z-index: 9;
+        width: 110%;
+        height: 100%;
+        background: $highlight;
+        display: block;
+        transform: rotate(2deg);
+    }
+    .heading {
+        position: relative;
+        z-index: 99;
+        font-family: $alt-font-family;
+        font-size: 64px;
+        font-weight: 400;
+        color: $off-white;
+        text-transform: uppercase;
+    }
+    p {
+        position: relative;
+        z-index: 99;
+        font-size: 24px;
+        font-weight: 400;
+        color: $off-white;
     }
 }
