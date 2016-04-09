@@ -11,5 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
 Route::auth();
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/add-work', 'WorkController@index')->name('add-work');
