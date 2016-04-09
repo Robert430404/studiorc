@@ -11,7 +11,7 @@ $alt-font-family: 'Oswald', sans-serif;
 
 // Tag Styles
 body {
-    background: $light-grey url('https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png');
+    background: $light-grey url('https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png') fixed 0 50%;
     color: $black;
     font-family: $font-family;
 }
@@ -190,7 +190,7 @@ a:hover {
     &:before {
         content: ' ';
         position: absolute;
-        top: -20%;
+        top: -11%;
         left: -5%;
         z-index: 9;
         width: 110%;
@@ -202,7 +202,7 @@ a:hover {
     &:after {
         content: ' ';
         position: absolute;
-        bottom: -20%;
+        bottom: -11%;
         left: 0;
         z-index: 9;
         width: 110%;
@@ -219,6 +219,11 @@ a:hover {
         font-weight: 400;
         color: $off-white;
         text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+    .image-container {
+        position: relative;
+        z-index: 99;
     }
     p {
         position: relative;
@@ -226,5 +231,24 @@ a:hover {
         font-size: 24px;
         font-weight: 400;
         color: $off-white;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        border-radius: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+.contact {
+    margin-bottom: 120px;
+    .heading {
+        position: relative;
+        z-index: 99;
+        font-size: 64px;
+        font-weight: 400;
+        font-family: $alt-font-family;
+        text-transform: uppercase;
+        margin-bottom: 60px;
     }
 }

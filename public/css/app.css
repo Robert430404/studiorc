@@ -1,5 +1,5 @@
 body {
-  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png");
+  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") fixed 0 50%;
   color: #000;
   font-family: "Raleway", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica", sans-serif; }
 
@@ -150,7 +150,7 @@ a:hover {
   .about:before {
     content: ' ';
     position: absolute;
-    top: -20%;
+    top: -11%;
     left: -5%;
     z-index: 9;
     width: 110%;
@@ -162,7 +162,7 @@ a:hover {
   .about:after {
     content: ' ';
     position: absolute;
-    bottom: -20%;
+    bottom: -11%;
     left: 0;
     z-index: 9;
     width: 110%;
@@ -178,12 +178,33 @@ a:hover {
     font-size: 64px;
     font-weight: 400;
     color: #ecedee;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 60px; }
+  .about .image-container {
+    position: relative;
+    z-index: 99; }
   .about p {
     position: relative;
     z-index: 99;
     font-size: 24px;
     font-weight: 400;
     color: #ecedee; }
+  .about img {
+    position: absolute;
+    top: 50%;
+    border-radius: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.contact {
+  margin-bottom: 120px; }
+  .contact .heading {
+    position: relative;
+    z-index: 99;
+    font-size: 64px;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 60px; }
 
 /*# sourceMappingURL=app.css.map */
