@@ -1,5 +1,5 @@
 body {
-  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") fixed 50% 0;
+  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") 50% 0;
   color: #000;
   font-family: "Raleway", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica", sans-serif; }
 

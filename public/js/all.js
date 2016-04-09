@@ -32,6 +32,6 @@ $(document).ready(function () {
 jQuery(document).scroll(function () {
     var x = jQuery(document).scrollTop();
 
-    jQuery('body').css('background-position', '50% ' + parseInt(-x / 10) + 'px');
+    jQuery('body').css('background-position', '50% ' + parseInt(-x / 5) + 'px');
 });
 //# sourceMappingURL=all.js.map
