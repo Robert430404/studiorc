@@ -11,7 +11,13 @@
 |
 */
 
+// Authentication Routes
 Route::auth();
 
+// Homepage Route
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/add-work', 'WorkController@index')->name('add-work');
+
+// CMS Routes
+Route::get('/add-work',         'WorkController@index')->name('add-work');
+Route::post('/add-work/new',    'WorkController@addNewWork')->name('add-new-work');
+Route::post('/add-work/remove', 'WorkController@deleteWork')->name('add-new-work');

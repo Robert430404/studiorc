@@ -12,7 +12,7 @@ class WorkMigration extends Migration
      */
     public function up()
     {
-        Schema::create('work', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image');
             $table->string('link');
@@ -28,6 +28,6 @@ class WorkMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('work');
+        Schema::drop('works');
     }
 }

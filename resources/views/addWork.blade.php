@@ -10,7 +10,8 @@
                         Add New Work
                     </div>
                     <div class="panel-body">
-                        <form class="form" method="post" action="{{ url('/add-work/new') }}">
+                        <form class="form" method="post" action="{{ url('/add-work/new') }}" enctype="multipart/form-data">
+                            {{ csrf_field() }}
                             <div class="row">
                                 <div class="columns large-12 medium-12 small-12">
                                     <label>
@@ -53,7 +54,18 @@
                         Current Works
                     </div>
                     <div class="panel-body">
-
+                        <ul>
+                            @foreach($works as $key => $work)
+                                <li>
+                                    {{ $work->title }}
+                                    <form action="{{ url('/add-work/remove') }}" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="id" value="{{ $work->id }}" />
+                                        <input type="submit" value="Delete Work" />
+                                    </form>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
