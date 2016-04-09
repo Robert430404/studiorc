@@ -1,5 +1,5 @@
 body {
-  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") fixed 0 50%;
+  background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") fixed 50% 0;
   color: #000;
   font-family: "Raleway", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica", sans-serif; }
 
@@ -206,5 +206,53 @@ a:hover {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     margin-bottom: 60px; }
+  .contact form label {
+    font-size: 18px;
+    font-wight: 600;
+    color: #000;
+    text-transform: uppercase; }
+  .contact form input[type=text],
+  .contact form textarea {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    transition: all .3s; }
+    .contact form input[type=text]:focus,
+    .contact form textarea:focus {
+      background: #ecedee; }
+  .contact form textarea {
+    height: 150px; }
+  .contact form .button {
+    background: #3bad35;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 15px; }
+    .contact form .button:hover {
+      background: #4b4b4b; }
+
+.copyright-line {
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  padding: 30px 0 40px; }
+  .copyright-line:before {
+    content: ' ';
+    position: absolute;
+    top: -23%;
+    left: 0;
+    z-index: 9;
+    width: 110%;
+    height: 100%;
+    background: #ffffff;
+    display: block;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg); }
+  .copyright-line p {
+    position: relative;
+    z-index: 99;
+    font-size: 24px;
+    margin: 0; }
 
 /*# sourceMappingURL=app.css.map */

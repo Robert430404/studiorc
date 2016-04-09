@@ -11,8 +11,11 @@
     <body>
         <div class="main-content">
             @yield('content')
-        </div>
 
+            <div class="copyright-line">
+                <p>Copyright &copy; {{ date("Y") }} <span class="highlight">Studio RC and Robert Joseph Cox Jr</span>. All Rights Reserved.</p>
+            </div>
+        </div>
         <script src="{{ asset('/libs/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('/libs/foundation-sites/dist/foundation.min.js') }}"></script>
         <script src="{{ asset('/js/all.js') }}"></script>

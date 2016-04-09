@@ -21,7 +21,7 @@
     </div>
 
     <div class="about">
-        <h2 class="aligncenter heading">Who I Am</h2>
+        <h2 class="aligncenter heading">Who Is Robert Cox</h2>
         <div class="row">
             <div class="columns large-8 medium-6 small-12 about-text">
                 <p>
@@ -49,13 +49,13 @@
             <div class="row">
                 <div class="columns large-6 medium-6 small-12">
                     <label>
-                        Your Full Name *<br />
+                        Your Full Name <span class="highlight">*</span>
                         <input type="text" name="name" id="name" class="form-control name" />
                     </label>
                 </div>
                 <div class="columns large-6 medium-6 small-12">
                     <label>
-                        Your E-Mail Address *<br />
+                        Your E-Mail Address <span class="highlight">*</span>
                         <input type="text" name="email" id="email" class="form-control email" />
                     </label>
                 </div>
@@ -63,13 +63,13 @@
             <div class="row">
                 <div class="columns large-6 medium-6 small-12">
                     <label>
-                        Your Phone Number *<br />
+                        Your Phone Number <span class="highlight">*</span>
                         <input type="text" name="phone" id="phone" class="form-control phone" />
                     </label>
                 </div>
                 <div class="columns large-6 medium-6 small-12">
                     <label>
-                        Your E-Mail Subject *<br />
+                        Your E-Mail Subject <span class="highlight">*</span>
                         <input type="text" name="subject" id="subject" class="form-control subject" />
                     </label>
                 </div>
@@ -77,9 +77,14 @@
             <div class="row">
                 <div class="columns large-12 medium-12 small-12">
                     <label>
-                        Your Message *
+                        Your Message <span class="highlight">*</span>
                         <textarea name="message" id="message" class="form-control message"></textarea>
                     </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="columns large-12 medium-12 small-12">
+                    <input type="submit" value="Contact Me" class="button" />
                 </div>
             </div>
         </form>
