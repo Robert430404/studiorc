@@ -15,7 +15,7 @@ class WorkMigration extends Migration
         Schema::create('work', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image');
-            $table->string('link')->unique();
+            $table->string('link');
             $table->string('title');
             $table->timestamps();
         });
