@@ -1,0 +1,22 @@
+{
+  "name": "Studio RC",
+  "description": "My personal web portfolio",
+  "main": "/public/index.php",
+  "authors": [
+    "Robert Joseph Cox Jr. <robert@studiorclv.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Robert430404/studiorc",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "foundation-sites": "^6.2.1"
+  }
+}
