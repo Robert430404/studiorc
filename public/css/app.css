@@ -37,6 +37,9 @@ a:hover {
       text-transform: uppercase; }
     .add-work .panel .panel-body {
       padding: 20px; }
+      .add-work .panel .panel-body label {
+        font-size: 18px;
+        text-transform: uppercase; }
       .add-work .panel .panel-body .button {
         width: 100%;
         background: #3bad35;
@@ -44,9 +47,40 @@ a:hover {
         text-transform: uppercase;
         font-weight: 400;
         padding: 10px;
+        margin: 0;
         transition: all .5s; }
         .add-work .panel .panel-body .button:hover {
           background: #4b4b4b; }
+      .add-work .panel .panel-body .current-work {
+        margin: 0;
+        padding: 0; }
+        .add-work .panel .panel-body .current-work li {
+          list-style: none;
+          display: block;
+          overflow: hidden;
+          padding: 5px 5px 5px 15px;
+          line-height: 34px;
+          background: #ecedee;
+          text-transform: uppercase; }
+          .add-work .panel .panel-body .current-work li:nth-child(even) {
+            background: #ccc; }
+          .add-work .panel .panel-body .current-work li .title {
+            position: relative;
+            top: 2px; }
+          .add-work .panel .panel-body .current-work li form {
+            float: right; }
+            .add-work .panel .panel-body .current-work li form .button {
+              width: 100%;
+              background: #3bad35;
+              color: #ecedee;
+              text-transform: uppercase;
+              font-weight: 400;
+              padding: 10px;
+              margin: 0;
+              display: inline-block;
+              transition: all .5s; }
+              .add-work .panel .panel-body .current-work li form .button:hover {
+                background: #4b4b4b; }
 
 .login {
   position: fixed;

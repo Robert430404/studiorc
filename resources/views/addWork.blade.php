@@ -54,14 +54,14 @@
                         Current Works
                     </div>
                     <div class="panel-body">
-                        <ul>
+                        <ul class="current-work">
                             @foreach($works as $key => $work)
                                 <li>
-                                    {{ $work->title }}
+                                    <span class="title">{{ $work->title }}</span>
                                     <form action="{{ url('/add-work/remove') }}" method="post">
                                         {{ csrf_field() }}
                                         <input type="hidden" name="id" value="{{ $work->id }}" />
-                                        <input type="submit" value="Delete Work" />
+                                        <input type="submit" value="Delete Work" class="button" />
                                     </form>
                                 </li>
                             @endforeach
