@@ -2,19 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     /**
-     * Show the profile for the given user.
+     * Create a new controller instance.
      *
-     * @param  int  $id
-     * @return Response
+     * @return void
+     */
+    public function __construct()
+    {
+        //$this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('home');
+        return view('homepage');
     }
 }
