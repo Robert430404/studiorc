@@ -1,3 +1,7 @@
+body {
+  color: #000;
+  font-family: "Raleway", "Segoe UI", "Helvetica Neue", "Arial", "Helvetica", sans-serif; }
+
 .main-content {
   overflow: hidden; }
 
@@ -5,13 +9,16 @@
   text-align: center;
   display: block; }
 
+.highlight {
+  color: #3bad35; }
+
 .row.fluid {
   max-width: 100%; }
 
 .introduction {
   position: relative;
   background: #ecedee;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   padding: 40px 0 0;
   box-sizing: border-box; }
   .introduction:before {
@@ -56,10 +63,26 @@
         width: 40px;
         height: 40px;
         text-align: center;
-        line-height: 38px;
+        line-height: 40px;
         letter-spacing: -3px;
         padding: 0;
         margin: 0;
-        border-radius: 100px; }
+        border-radius: 100px;
+        transition: all .5s; }
+        .introduction .social li a i {
+          text-shadow: 0 0 0 transparent;
+          transition: all .5s; }
+        .introduction .social li a:hover {
+          background: #3bad35; }
+          .introduction .social li a:hover i {
+            text-shadow: 0px 2px 4px #4b4b4b; }
+
+.examples {
+  background: transparent; }
+  .examples .heading {
+    font-family: "Oswald", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=app.css.map */

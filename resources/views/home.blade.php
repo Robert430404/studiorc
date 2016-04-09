@@ -17,7 +17,7 @@
     </div>
 
     <div class="examples">
-        <h2 class="aligncenter">Some Of My Work</h2>
+        <h2 class="aligncenter heading">Some Of My Work</h2>
     </div>
 
     <div class="about">
