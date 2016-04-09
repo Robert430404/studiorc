@@ -1,11 +1,12 @@
 @extends('layouts.backend')
 
 @section('content')
+<div class="add-work">
     <div class="row">
         <div class="columns large-6 medium-6 small-12">
             <div class="add-new-work">
                 <div class="panel">
-                    <div class="panel-heading">
+                    <div class="panel-heading aligncenter">
                         Add New Work
                     </div>
                     <div class="panel-body">
@@ -34,6 +35,12 @@
                                     </label>
                                 </div>
                             </div>
+                            <hr />
+                            <div class="row">
+                                <div class="columns large-12 medium-12 small-12">
+                                    <input type="submit" value="Add Work" class="button" />
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -42,7 +49,7 @@
         <div class="columns large-6 medium-6 small-12">
             <div class="current-work">
                 <div class="panel">
-                    <div class="panel-heading">
+                    <div class="panel-heading aligncenter">
                         Current Works
                     </div>
                     <div class="panel-body">
@@ -52,4 +59,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

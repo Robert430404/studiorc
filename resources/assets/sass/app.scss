@@ -41,6 +41,36 @@ a:hover {
     }
 }
 
+.add-work {
+    padding: 60px 0;
+    .panel {
+        background: $white;
+        border: 1px solid $grey;
+        .panel-heading {
+            background: $grey;
+            color: $off-white;
+            padding: 10px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .panel-body {
+            padding: 20px;
+            .button {
+                width: 100%;
+                background: $highlight;
+                color: $off-white;
+                text-transform: uppercase;
+                font-weight: 400;
+                padding: 10px;
+                transition: all .5s;
+                &:hover {
+                    background: $grey;
+                }
+            }
+        }
+    }
+}
+
 .login {
     position: fixed;
     top: 0;

@@ -24,6 +24,30 @@ a:hover {
 .row.fluid {
   max-width: 100%; }
 
+.add-work {
+  padding: 60px 0; }
+  .add-work .panel {
+    background: #ffffff;
+    border: 1px solid #4b4b4b; }
+    .add-work .panel .panel-heading {
+      background: #4b4b4b;
+      color: #ecedee;
+      padding: 10px;
+      font-size: 24px;
+      text-transform: uppercase; }
+    .add-work .panel .panel-body {
+      padding: 20px; }
+      .add-work .panel .panel-body .button {
+        width: 100%;
+        background: #3bad35;
+        color: #ecedee;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: 10px;
+        transition: all .5s; }
+        .add-work .panel .panel-body .button:hover {
+          background: #4b4b4b; }
+
 .login {
   position: fixed;
   top: 0;
