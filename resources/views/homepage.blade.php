@@ -18,6 +18,15 @@
 
     <div class="examples">
         <h2 class="aligncenter heading">Some Of My Work</h2>
+        <div class="row">
+            @foreach($works as $key => $work)
+                <div class="columns large-3 medium-4 small-6 work">
+                    <a href="{{ $work->link }}" target="_blank" class="work" style="background: url({{ asset('/work-image/' . $work->image) }});">
+                        {{ $work->title }}
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </div>
 
     <div class="about">

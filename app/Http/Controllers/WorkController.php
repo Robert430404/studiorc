@@ -48,7 +48,6 @@ class WorkController extends Controller
         {
             $fileName    = $image->getClientOriginalName();
             $storagePath = storage_path();
-            $imgPath     = $storagePath . '/app/public/images/';
 
             $image->move($storagePath . '/app/public/images/', $fileName);
         }
@@ -56,7 +55,7 @@ class WorkController extends Controller
         Work::create([
             'title' => $title,
             'link'  => $link,
-            'image' => $imgPath
+            'image' => $fileName
         ]);
 
         return redirect('/add-work');
@@ -70,9 +69,8 @@ class WorkController extends Controller
     public function deleteWork(Request $request)
     {
         $id           = $request->input('id');
-        $storagePath  = storage_path() . '/app';
         $selectedWork = Work::where('id', '=', $id)->get()->toArray();
-        $image        = str_replace($storagePath, '', $selectedWork[0]['image']);
+        $image        = '/public/images/' . $selectedWork[0]['image'];
 
         Storage::delete($image);
 

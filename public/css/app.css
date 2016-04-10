@@ -201,6 +201,8 @@ a:hover {
     font-size: 64px;
     font-weight: 400;
     text-transform: uppercase; }
+  .examples .work {
+    text-align: center; }
 
 .about {
   position: relative;
