@@ -33,3 +33,7 @@ Route::get('/work-image/{file}', function($file){
 Route::get('/add-work',         'WorkController@index')->name('add-work');
 Route::post('/add-work/new',    'WorkController@addNewWork')->name('add-new-work');
 Route::post('/add-work/remove', 'WorkController@deleteWork')->name('add-new-work');
+
+// Contact Routes
+Route::get('/thank-you', 'ContactController@thankYou')->name('thank-you');
+Route::post('/email', 'ContactController@sendEmail')->name('send-email');

@@ -18,9 +18,3 @@ class LayoutFunctions
 $(document).ready(function (){
     var layout = new LayoutFunctions();
 });
-
-jQuery(document).scroll(function() {
-    var x = jQuery(document).scrollTop();
-
-    jQuery('body').css('background-position', '50% ' + parseInt(-x / 5) + 'px');
-});

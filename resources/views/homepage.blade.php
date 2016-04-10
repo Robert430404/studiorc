@@ -21,9 +21,7 @@
         <div class="row">
             @foreach($works as $key => $work)
                 <div class="columns large-3 medium-4 small-6 work">
-                    <a href="{{ $work->link }}" target="_blank" class="work" style="background: url({{ asset('/work-image/' . $work->image) }});">
-                        {{ $work->title }}
-                    </a>
+                    <a href="{{ $work->link }}" target="_blank" class="work" style="background-image: url({{ asset('/work-image/' . $work->image) }});"></a>
                 </div>
             @endforeach
         </div>
