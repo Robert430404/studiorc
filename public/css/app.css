@@ -283,6 +283,16 @@ a:hover {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     margin-bottom: 60px; }
+  .contact .errors {
+    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px 10px;
+    max-width: 73rem; }
+    .contact .errors .error {
+      float: left;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #900; }
   .contact form label {
     font-size: 18px;
     font-wight: 600;

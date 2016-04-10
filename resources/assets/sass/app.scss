@@ -4,6 +4,7 @@ $off-white: #ecedee;
 $light-grey: #ccc;
 $grey: #4b4b4b;
 $black: #000;
+$red: #900;
 $highlight: #3bad35;
 
 $font-family: 'Raleway', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
@@ -344,6 +345,18 @@ a:hover {
         font-family: $alt-font-family;
         text-transform: uppercase;
         margin-bottom: 60px;
+    }
+    .errors {
+        margin-bottom: 30px;
+        background: $white;
+        padding: 20px 10px;
+        max-width: 73rem;
+        .error {
+            float: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $red;
+        }
     }
     form {
         label {

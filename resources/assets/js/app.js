@@ -17,4 +17,8 @@ class LayoutFunctions
 
 $(document).ready(function (){
     var layout = new LayoutFunctions();
+
+    $(window).resize(function (){
+        layout.aboutImageContainer();
+    });
 });

@@ -53,6 +53,22 @@
     <div class="contact">
         <h2 class="aligncenter heading">Send Me An Email</h2>
         <form class="form" method="post" action="{{ url('/email') }}">
+            @if (count($errors) > 0)
+                <div class="errors row">
+                    @foreach ($errors->all() as $error)
+                        <div class="columns large-6 medium-6 small-12 error">{{ $error }}</div>
+                    @endforeach
+                </div>
+                <script type="text/javascript">
+                    document.addEventListener("DOMContentLoaded", function(event) {
+                        $('html, body').animate({
+                            scrollTop: $(document).height()
+                        }, 1500);
+                    });
+                </script>
+            @endif
+            {{ csrf_field() }}
+            <input type="text" name="honeypot" id="honeypot" style="position: fixed; top: -1000000px;" />
             <div class="row">
                 <div class="columns large-6 medium-6 small-12">
                     <label>

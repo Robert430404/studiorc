@@ -27,5 +27,9 @@ var LayoutFunctions = function () {
 
 $(document).ready(function () {
     var layout = new LayoutFunctions();
+
+    $(window).resize(function () {
+        layout.aboutImageContainer();
+    });
 });
 //# sourceMappingURL=all.js.map
