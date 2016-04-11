@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('description')
+Thank you for contacting Studio RC.
+@endsection
+
 @section('content')
 
     <div class="thank-you">

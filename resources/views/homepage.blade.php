@@ -1,10 +1,14 @@
 @extends('layouts.main')
 
+@section('description')
+Modern web design and development for any business big or small. Studiorc specializes in raw code and WordPress development for any and all budgets.
+@endsection
+
 @section('content')
 
     <div class="introduction">
         <div class="row fluid">
-            <div class="columns large-6 large-offset-3 medium-8 medium-offset-2 small-12 small-offset-0">
+            <div class="columns large-12 large-offset-0 medium-12 medium-offset-0 small-12 small-offset-0">
                 <h1 class="aligncenter heading">Studio <span class="highlight">RC</span></h1>
                 <h3 class="aligncenter sub-heading">ROBERT COX - LAS VEGAS, NV - 702.443.3886</h3>
                 <ul class="social menu horizontal">
@@ -20,7 +24,7 @@
         <h2 class="aligncenter heading">Some Of My Work</h2>
         <div class="row">
             @foreach($works as $key => $work)
-                <div class="columns large-3 medium-4 small-6 work">
+                <div class="columns large-3 medium-4 small-12 work">
                     <a href="{{ $work->link }}" target="_blank" class="work" style="background-image: url({{ asset('/work-image/' . $work->image) }});"></a>
                 </div>
             @endforeach
@@ -30,7 +34,7 @@
     <div class="about">
         <h2 class="aligncenter heading">Who Is Robert Cox</h2>
         <div class="row">
-            <div class="columns large-8 medium-6 small-12 about-text">
+            <div class="columns large-8 medium-12 small-12 about-text">
                 <p>
                     I am a passionate developer living in Las Vegas, NV. Bringing amazing user experiences to people through the web is what makes me get up in the morning and go to work.
                 </p>
@@ -44,7 +48,7 @@
                     No matter what I will find a way to create an elegant, maintainable, and updatable solution to any problem that comes my way.
                 </p>
             </div>
-            <div class="columns large-4 medium-6 small-12 image-container">
+            <div class="columns large-4 medium-12 small-12 image-container show-for-large">
                 <img src="https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/robert-cox-headshot.jpg" />
             </div>
         </div>

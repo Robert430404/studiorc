@@ -443,3 +443,73 @@ a:hover {
         margin: 0;
     }
 }
+
+@media(max-width: 650px) {
+    .introduction {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 70px;
+        .heading {
+            font-size: 64px;
+        }
+        .sub-heading {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .social {
+            margin-top: 15px;
+        }
+    }
+    .examples {
+        margin-bottom: 100px;
+        .heading {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        .work {
+            a {
+                width: 240px;
+                height: 240px;
+                margin: 0 auto;
+                float: none !important;
+            }
+        }
+    }
+    .about {
+        margin-bottom: 80px;
+        p {
+            font-size: 14px;
+            text-align: justify;
+        }
+        .heading {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+    }
+    .contact {
+        margin-bottom: 40px;
+        form {
+            label {
+                font-size: 14px;
+            }
+        }
+        .heading {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+    }
+    .copyright-line {
+        padding: 5px 15px 15px;
+        p {
+            font-size: 14px;
+        }
+    }
+    .thank-you {
+        h1 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
