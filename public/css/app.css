@@ -1,3 +1,18 @@
+::-moz-selection {
+  background: #3bad35;
+  color: #4b4b4b;
+  opacity: .5; }
+
+::selection {
+  background: #3bad35;
+  color: #4b4b4b;
+  opacity: .5; }
+
+::-moz-selection {
+  background: #3bad35;
+  color: #4b4b4b;
+  opacity: .5; }
+
 body {
   background: #ccc url("https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png") 50% 0 fixed;
   color: #000;
@@ -269,6 +284,7 @@ a:hover {
   .about img {
     position: absolute;
     top: 50%;
+    max-width: 90%;
     border-radius: 100%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }

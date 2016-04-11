@@ -55,8 +55,11 @@ class ContactController extends Controller
         ]);
 
         Mail::send('emails.contact', ['formInfo' => $formInfo], function ($m) use ($formInfo) {
-           $m->from($formInfo['email'], $formInfo['name']);
-           $m->to('robert@studiorclv.com', 'Robert Joseph Cox')->subject($formInfo['subject']);
-       });
+            $m->from('sendmail@studiorclv.com', 'Send Mail');
+            $m->replyTo($formInfo['email'], $formInfo['name']);
+            $m->to('robert@studiorclv.com', 'Robert Joseph Cox')->subject($formInfo['subject']);
+        });
+
+        return redirect('/thank-you');
     }
 }

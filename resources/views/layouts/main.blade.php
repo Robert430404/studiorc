@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Studio RC - Web Developement And Design - Robert Joseph Cox Jr. - Las Vegas, NV</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.png') }}" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700|Raleway:400,300,700" />
         <link rel="stylesheet" href="{{ asset('/libs/foundation-sites/dist/foundation.min.css') }}" />
         <link rel="stylesheet" href="{{ asset('/libs/font-awesome/css/font-awesome.min.css') }}" />

@@ -11,6 +11,17 @@ $font-family: 'Raleway', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Helvetica', san
 $alt-font-family: 'Oswald', sans-serif;
 
 // Tag Styles
+::selection {
+    background: $highlight;
+    color: $grey;
+    opacity: .5;
+}
+::-moz-selection {
+    background: $highlight;
+    color: $grey;
+    opacity: .5;
+}
+
 body {
     background: $light-grey url('https://s3-us-west-1.amazonaws.com/sutiodrc-portfolio/images/portfolio-background.png') 50% 0 fixed;
     color: $black;
@@ -330,6 +341,7 @@ a:hover {
     img {
         position: absolute;
         top: 50%;
+        max-width: 90%;
         border-radius: 100%;
         transform: translateY(-50%);
     }
