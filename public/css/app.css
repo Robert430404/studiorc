@@ -251,7 +251,7 @@ a:hover {
     float: left !important; }
     .examples .work a {
       text-align: center;
-      background-size: contain;
+      background-size: 70%;
       background-position: center center;
       background-repeat: no-repeat;
       background-color: #4b4b4b;
