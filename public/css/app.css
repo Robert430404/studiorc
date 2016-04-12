@@ -43,7 +43,8 @@ a:hover {
   padding: 60px 0; }
   .add-work .panel {
     background: #ffffff;
-    border: 1px solid #4b4b4b; }
+    border: 1px solid #4b4b4b;
+    margin-bottom: 20px; }
     .add-work .panel .panel-heading {
       background: #4b4b4b;
       color: #ecedee;
@@ -55,6 +56,28 @@ a:hover {
       .add-work .panel .panel-body label {
         font-size: 18px;
         text-transform: uppercase; }
+      .add-work .panel .panel-body input[type=text] {
+        border: 2px solid #3bad35;
+        box-shadow: none;
+        background: #ffffff;
+        transition: all .5s; }
+        .add-work .panel .panel-body input[type=text]:focus {
+          background: #ecedee;
+          border-color: #4b4b4b; }
+      .add-work .panel .panel-body input[type=file] {
+        background: #ffffff;
+        padding: 10px;
+        border: 2px solid #3bad35;
+        line-height: 1;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 0;
+        display: block;
+        outline: none !important;
+        transition: all .5s; }
+        .add-work .panel .panel-body input[type=file]:focus, .add-work .panel .panel-body input[type=file]:active {
+          background: #ecedee;
+          border-color: #4b4b4b; }
       .add-work .panel .panel-body .button {
         width: 100%;
         background: #3bad35;
@@ -81,9 +104,16 @@ a:hover {
             background: #ccc; }
           .add-work .panel .panel-body .current-work li .title {
             position: relative;
-            top: 2px; }
+            top: 2px;
+            display: block;
+            float: left;
+            max-width: 65%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; }
           .add-work .panel .panel-body .current-work li form {
-            float: right; }
+            float: right;
+            max-width: 35%; }
             .add-work .panel .panel-body .current-work li form .button {
               width: 100%;
               background: #3bad35;

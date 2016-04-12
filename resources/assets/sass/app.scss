@@ -58,6 +58,7 @@ a:hover {
     .panel {
         background: $white;
         border: 1px solid $grey;
+        margin-bottom: 20px;
         .panel-heading {
             background: $grey;
             color: $off-white;
@@ -70,6 +71,33 @@ a:hover {
             label {
                 font-size: 18px;
                 text-transform: uppercase;
+            }
+            input[type=text] {
+                border: 2px solid $highlight;
+                box-shadow: none;
+                background: $white;
+                transition: all .5s;
+                &:focus {
+                    background: $off-white;
+                    border-color: $grey;
+                }
+            }
+            input[type=file] {
+                background: $white;
+                padding: 10px;
+                border: 2px solid $highlight;
+                line-height: 1;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin: 0;
+                display: block;
+                outline: none !important;
+                transition: all .5s;
+                &:focus,
+                &:active {
+                    background: $off-white;
+                    border-color: $grey;
+                }
             }
             .button {
                 width: 100%;
@@ -101,9 +129,16 @@ a:hover {
                     .title {
                         position: relative;
                         top: 2px;
+                        display: block;
+                        float: left;
+                        max-width: 65%;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                     }
                     form {
                         float: right;
+                        max-width: 35%;
                         .button {
                             width: 100%;
                             background: $highlight;
