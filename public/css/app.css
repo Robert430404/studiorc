@@ -423,7 +423,8 @@ a:hover {
         width: 150px;
         height: 150px;
         margin: 0 auto;
-        float: none !important; }
+        float: none !important;
+        border: 0px solid #4b4b4b; }
   .about {
     margin-bottom: 80px; }
     .about p {
