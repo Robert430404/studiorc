@@ -417,11 +417,13 @@ a:hover {
     .examples .heading {
       font-size: 32px;
       margin-bottom: 30px; }
-    .examples .work a {
-      width: 240px;
-      height: 240px;
-      margin: 0 auto;
-      float: none !important; }
+    .examples .work {
+      margin-bottom: 30px; }
+      .examples .work a {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        float: none !important; }
   .about {
     margin-bottom: 80px; }
     .about p {

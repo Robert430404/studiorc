@@ -24,7 +24,7 @@ Modern web design and development for any business big or small. Studiorc specia
         <h2 class="aligncenter heading">Some Of My Work</h2>
         <div class="row">
             @foreach($works as $key => $work)
-                <div class="columns large-3 medium-4 small-12 work">
+                <div class="columns large-3 medium-4 small-6 work">
                     <a href="{{ $work->link }}" target="_blank" class="work" style="background-image: url({{ asset('/work-image/' . $work->image) }});"></a>
                 </div>
             @endforeach
