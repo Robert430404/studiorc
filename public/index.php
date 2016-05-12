@@ -23,31 +23,6 @@ require __DIR__.'/../bootstrap/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Setup Raygun And Have It Intercept Error Handling
-|--------------------------------------------------------------------------
-|
-| Inject the Raygun class and intercept errors and send them out to raygun
-| and pass them back to the application for local error reporting
-|
-*/
-
-$client = new \Raygun4php\RaygunClient("/0ZI9oKT3u4bzlFki4Qs/w==");
-
-function error_handler($errno, $errstr, $errfile, $errline ) {
-    global $client;
-    $client->SendError($errno, $errstr, $errfile, $errline);
-}
-function exception_handler($exception)
-{
-    global $client;
-    $client->SendException($exception);
-}
-
-set_exception_handler('exception_handler');
-set_error_handler("error_handler");
-
-/*
-|--------------------------------------------------------------------------
 | Turn On The Lights
 |--------------------------------------------------------------------------
 |
