@@ -40,9 +40,10 @@ class WorkController extends Controller
      */
     public function addNewWork(Request $request)
     {
-        $title = $request->input('title');
-        $link  = $request->input('link');
-        $image = $request->file('image');
+        $title    = $request->input('title');
+        $link     = $request->input('link');
+        $image    = $request->file('image');
+        $fileName = '';
 
         if($image->isValid())
         {
