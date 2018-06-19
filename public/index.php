@@ -60,7 +60,7 @@
             <span class="Main__wrapper--middot">
                 &middot;
             </span>
-            <a href="tel:+702-931-0866" class="Main__wrapper--telLink">
+            <a href="tel:+1-702-931-0866" class="Main__wrapper--telLink">
                 702-931-0864
             </a>
         </nav>
