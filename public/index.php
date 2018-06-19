@@ -1,58 +1,70 @@
-<?php
+<html>
+<head>
+    <title>Studio RC - The online home of Robert Joseph Cox Jr.</title>
 
-/**
- * Laravel - A PHP Framework For Web Artisans
- *
- * @package  Laravel
- * @author   Taylor Otwell <taylorotwell@gmail.com>
- */
+    <!-- Additional Meta Tags For Display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/*
-|--------------------------------------------------------------------------
-| Register The Auto Loader
-|--------------------------------------------------------------------------
-|
-| Composer provides a convenient, automatically generated class loader for
-| our application. We just need to utilize it! We'll simply require it
-| into the script here so that we don't have to worry about manual
-| loading any of our classes later on. It feels nice to relax.
-|
-*/
+    <!-- Load The External Styles -->
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+            crossorigin="anonymous"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    />
 
-require __DIR__.'/../bootstrap/autoload.php';
-
-/*
-|--------------------------------------------------------------------------
-| Turn On The Lights
-|--------------------------------------------------------------------------
-|
-| We need to illuminate PHP development, so let us turn on the lights.
-| This bootstraps the framework and gets it ready for use, then it
-| will load up this application so that we can run it and send
-| the responses back to the browser and delight our users.
-|
-*/
-
-$app = require_once __DIR__.'/../bootstrap/app.php';
-
-/*
-|--------------------------------------------------------------------------
-| Run The Application
-|--------------------------------------------------------------------------
-|
-| Once we have the application, we can handle the incoming request
-| through the kernel, and send the associated response back to
-| the client's browser allowing them to enjoy the creative
-| and wonderful application we have prepared for them.
-|
-*/
-
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
-
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
-);
-
-$response->send();
-
-$kernel->terminate($request, $response);
+    <!-- Load The Custom Styles -->
+    <link
+            rel="stylesheet"
+            href="./css/index.css"
+    />
+</head>
+<body>
+<section class="Main__wrapper">
+    <header>
+        <img src="./img/headshot.jpeg" alt="Robert Joseph Cox Jr." class="Main__wrapper--headshot"/>
+        <h1>Studio <span class="Main__wrapper--bold">RC</span></h1>
+        <h2>
+            Just a simple dude who enjoys <span class="Main__wrapper--bold">programming</span> <br /> and hanging with the family.
+        </h2>
+        <nav>
+            <a
+                    href="https://twitter.com/robert430404"
+                    class="Main__wrapper--externalLink"
+                    target="_blank"
+            >
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a
+                    href="https://github.com/Robert430404"
+                    class="Main__wrapper--externalLink"
+                    target="_blank"
+            >
+                <i class="fab fa-github"></i>
+            </a>
+            <a
+                    href="https://layer8.space/@robert"
+                    class="Main__wrapper--externalLink"
+                    target="_blank"
+            >
+                <i class="fab fa-mastodon"></i>
+            </a>
+            <span class="Main__wrapper--middot">
+                &middot;
+            </span>
+            <a href="tel:+702-931-0866" class="Main__wrapper--telLink">
+                702-931-0864
+            </a>
+        </nav>
+    </header>
+</section>
+</body>
+</html>

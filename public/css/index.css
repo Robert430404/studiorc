@@ -1,0 +1,80 @@
+body {
+    background: #2b2b2b;
+    font-family: 'Lato Light', 'sans-serif';
+}
+
+header {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 46px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #ecedee;
+    line-height: 1;
+    margin: 0 0 25px;
+    display: block;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    display: block;
+    margin: 0 0 25px;
+    line-height: 1.25;
+    color: #ecedee;
+}
+
+.Main__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Main__wrapper--bold {
+    font-weight: 700;
+    color: #3bad35;
+}
+
+.Main__wrapper--headshot {
+    border-radius: 100%;
+    width: 250px;
+    display: inline-block;
+    border: 10px solid #ecedee;
+    margin: 0 0 25px;
+    align-items: center;
+}
+
+.Main__wrapper--externalLink {
+    margin: 0 10px 0 0;
+}
+
+.Main__wrapper--middot {
+    color: #3bad35;
+    margin: 0 10px 0 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.Main__wrapper--telLink {
+    font-weight: 700;
+}
+
+.Main__wrapper--externalLink,
+.Main__wrapper--telLink {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ecedee;
+    outline: none;
+    transition: all .15s;
+}
+
+.Main__wrapper--externalLink:hover,
+.Main__wrapper--telLink:hover {
+    color: #3bad35;
+}
