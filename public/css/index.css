@@ -1,5 +1,6 @@
 body {
-    background: #2b2b2b url('/img/background.png');
+    background: #2b2b2b url('.././img/background.png') fixed;
+    background-size: 200px;
     font-family: 'Lato', sans-serif;
 }
 
