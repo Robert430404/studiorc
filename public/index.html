@@ -4,22 +4,19 @@
   <title>Studio RC - The online home of Robert Joseph Cox Jr.</title>
 
   <!-- Additional Meta Tags For Display -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
 
   <!-- Load The External Styles -->
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous"
-  />
   <link
     href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700"
     rel="stylesheet"
   />
+
+  <!-- Load Reset/Asset Styles -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+    href="./css/normalize.css"
   />
 
   <!-- Load The Custom Styles -->
@@ -37,11 +34,11 @@
 <body>
 <section class="Main__wrapper">
   <header>
-    <img
+    <span
       src="./img/headshot.jpeg"
       alt="Robert Joseph Cox Jr."
       class="Main__wrapper--headshot"
-    />
+    ></span>
     <h1>
       Studio <span class="Main__wrapper--bold">RC</span>
     </h1>
@@ -59,14 +56,20 @@
         class="Main__wrapper--externalLink"
         target="_blank"
       >
-        <i class="fab fa-twitter"></i>
+        <object 
+          type="image/svg+xml" 
+          data="./img/twitter.svg"
+        ></object>
       </a>
       <a
         href="https://github.com/Robert430404"
         class="Main__wrapper--externalLink"
         target="_blank"
       >
-        <i class="fab fa-github"></i>
+        <object 
+          type="image/svg+xml" 
+          data="./img/github.svg"
+        ></object>
       </a>
       <span class="Main__wrapper--middot">
         &middot;
