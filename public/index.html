@@ -44,6 +44,11 @@
       <br/>
       and hanging with the family.
     </h2>
+    <p>
+      Senor Software Engineer 
+      <br/>
+      Golang, Python, PHP, JavaScript, TypeScript
+    </p>
     <nav>
       <a
         href="https://twitter.com/robert430404"
@@ -65,6 +70,16 @@
           data="./img/github.svg"
         ></object>
       </a>
+      <a
+        href="https://www.linkedin.com/in/robert430404/"
+        class="Main__wrapper--externalLink"
+        target="_blank"
+      >
+        <object 
+          type="image/svg+xml" 
+          data="./img/linkedin.svg"
+        ></object>
+      </a>
       <span class="Main__wrapper--middot">
         &middot;
       </span>
@@ -73,7 +88,7 @@
       </a>
     </nav>
     <section class="Main__wrapper--copyright">
-      Copyright &copy; <span class="Main__wrapper--bold" id="Main__wrapper--copydate"></span>
+      Copyright &copy; <span class="Main__wrapper--bold" id="Main__wrapper--copydate">2020</span>
     </section>
   </header>
 </section>
@@ -83,10 +98,11 @@
   const interest = document.querySelector('#Main__wrapper--interest');
   const hobbies = [
     'programming',
-    'skate boarding',
     'playing guitar',
-    'drinking beer',
     'working',
+    'wood working',
+    'hiking',
+    'nature',
   ];
 
   copydate.innerHTML = (new Date).getFullYear();
