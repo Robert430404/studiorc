@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build the frontend
-npm run build
+npm run build:prod
 
 # clear previous image
 docker rmi robert430404/studiorclv-site:latest
