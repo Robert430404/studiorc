@@ -1,103 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Studio RC - The online home of Robert Joseph Cox Jr.</title>
+  <head>
+    <title>Studio RC - The online home of Robert Joseph Cox Jr.</title>
 
-  <!-- Additional Meta Tags For Display -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta charset="utf-8" />
+    <!-- Additional Meta Tags For Display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
 
-  <!-- Load Reset/Asset Styles -->
-  <link
-    rel="stylesheet"
-    href="./css/normalize.css"
-  />
+    <!-- Register The Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <noscript> Please enable JavaScript to use the website </noscript>
 
-  <!-- Load The Custom Styles -->
-  <link
-    rel="stylesheet"
-    href="./css/index.css"
-  />
-
-  <!-- Register The Favicon -->
-  <link
-    rel="shortcut icon"
-    href="./favicon.ico"
-  />
-</head>
-<body>
-<section class="Main__wrapper">
-  <header>
-    <span
-      src="./img/headshot.jpeg"
-      alt="Robert Joseph Cox Jr."
-      class="Main__wrapper--headshot"
-    ></span>
-    <h1>
-      Studio <span class="Main__wrapper--bold">RC</span>
-    </h1>
-    <h2>
-      Just a simple dude who enjoys
-      <span class="Main__wrapper--bold" id="Main__wrapper--interest">
-        drinking beer
-      </span>
-      <br/>
-      and hanging with the family.
-    </h2>
-    <p>
-      Senor Software Engineer 
-      <br/>
-      Golang, Python, PHP, JavaScript, TypeScript
-    </p>
-    <nav>
-      <a
-        href="https://github.com/Robert430404"
-        class="Main__wrapper--externalLink"
-        target="_blank"
-      >
-        <object 
-          type="image/svg+xml" 
-          data="./img/github.svg"
-        ></object>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/robert430404/"
-        class="Main__wrapper--externalLink"
-        target="_blank"
-      >
-        <object 
-          type="image/svg+xml" 
-          data="./img/linkedin.svg"
-        ></object>
-      </a>
-      <span class="Main__wrapper--middot">
-        &middot;
-      </span>
-      <a href="tel:+1-702-931-0864" class="Main__wrapper--telLink">
-        702-931-0864
-      </a>
-    </nav>
-    <section class="Main__wrapper--copyright">
-      Copyright &copy; <span class="Main__wrapper--bold" id="Main__wrapper--copydate">2020</span>
-    </section>
-  </header>
-</section>
-
-<script type="text/javascript">
-  const copydate = document.querySelector('#Main__wrapper--copydate');
-  const interest = document.querySelector('#Main__wrapper--interest');
-  const hobbies = [
-    'programming',
-    'playing guitar',
-    'working',
-    'wood working',
-    'hiking',
-    'nature',
-  ];
-
-  copydate.innerHTML = (new Date).getFullYear();
-  interest.innerHTML = hobbies[Math.floor(Math.random() * hobbies.length)];
-</script>
-
-</body>
+    <!-- Load in the JS bundle that builds the site -->
+    <script type="text/javascript" src="dist/bundle.js"></script>
+  </body>
 </html>
