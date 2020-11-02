@@ -8,6 +8,7 @@ const ExternalLinks = (): Component => {
     SocialLink({
       link: 'https://github.com/Robert430404',
       iconPath: './img/github.svg',
+      alt: 'github link',
     }),
   );
 
@@ -15,6 +16,7 @@ const ExternalLinks = (): Component => {
     SocialLink({
       link: 'https://www.linkedin.com/in/robert430404/',
       iconPath: './img/linkedin.svg',
+      alt: 'linkedin link',
     }),
   );
 

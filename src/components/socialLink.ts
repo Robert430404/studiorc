@@ -3,6 +3,7 @@ import CreateComponent, { Component, ComponentProperties } from './component';
 interface Properties extends ComponentProperties {
   iconPath: string;
   link: string;
+  alt: string;
 }
 
 export const SocialLink = (props: Properties): Component => {
@@ -12,6 +13,7 @@ export const SocialLink = (props: Properties): Component => {
 
   component.setAttribute('href', props.link);
   component.setAttribute('target', '_blank');
+  component.setAttribute('rel', 'noreferrer');
 
   component.classList.add('Main__wrapper--externalLink');
 
@@ -21,6 +23,7 @@ export const SocialLink = (props: Properties): Component => {
 
       object.setAttribute('type', 'image/svg+xml');
       object.setAttribute('data', props.iconPath);
+      object.setAttribute('alt', props.alt);
 
       return object;
     })(),
