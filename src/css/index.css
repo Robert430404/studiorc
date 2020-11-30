@@ -60,6 +60,7 @@ object {
   display: block;
   position: relative;
   top: 4px;
+  margin: 0 auto 12px;
 }
 
 .Main__wrapper {
@@ -95,6 +96,10 @@ object {
 .Main__wrapper--externalLink {
   margin: 0 14px 0 0;
   display: inline-block;
+  color: #fec149;
+  transition: all 0.3s;
+  text-align: center;
+  font-size: 0.75rem;
 }
 
 .Main__wrapper--telLink {

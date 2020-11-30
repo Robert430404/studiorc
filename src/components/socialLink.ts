@@ -14,6 +14,7 @@ export const SocialLink = (props: Properties): Component => {
   component.setAttribute('href', props.link);
   component.setAttribute('target', '_blank');
   component.setAttribute('rel', 'noreferrer');
+  component.setAttribute('name', props.alt);
 
   component.classList.add('Main__wrapper--externalLink');
 
@@ -28,6 +29,8 @@ export const SocialLink = (props: Properties): Component => {
       return object;
     })(),
   );
+
+  component.appendChild(document.createTextNode(props.alt));
 
   return component;
 };
