@@ -4,7 +4,7 @@ const ByLine = (): Component => {
   const component = CreateComponent(document.createElement('p'));
 
   component.appendChild(
-    document.createTextNode('Senor Software Engineer, experienced in:'),
+    document.createTextNode('Senior Software Engineer, experienced in:'),
   );
 
   component.appendChild(document.createElement('br'));

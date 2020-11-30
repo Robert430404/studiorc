@@ -85,7 +85,7 @@ object {
 
 .Main__wrapper--bold {
   font-weight: 700;
-  color: #ff00be;
+  color: #fec149;
 }
 
 .Main__wrapper--headshot::before {
@@ -108,7 +108,7 @@ object {
 
 .Main__wrapper--externalLink:hover,
 .Main__wrapper--telLink:hover {
-  color: #bd0057;
+  color: #c29437;
 }
 
 .Main__wrapper--copyright {

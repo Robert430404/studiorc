@@ -14,7 +14,7 @@ const App = () => {
   component.append(Header());
 
   // Grab the body from the page
-  const body = document.querySelector('body');
+  const body = document.body;
 
   if (!body) {
     throw Error('Something is very wrong, there is no body');
