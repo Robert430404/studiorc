@@ -26,6 +26,8 @@ export const SocialLink = (props: Properties): Component => {
       object.setAttribute('data', props.iconPath);
       object.setAttribute('alt', props.alt);
 
+      object.appendChild(document.createTextNode(props.alt));
+
       return object;
     })(),
   );

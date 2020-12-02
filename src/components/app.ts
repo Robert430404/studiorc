@@ -21,6 +21,10 @@ const App = () => {
   }
 
   body.append(component);
+
+  const loader = CreateComponent(document.querySelector('.Loader'));
+
+  loader.remove();
 };
 
 export default App;
