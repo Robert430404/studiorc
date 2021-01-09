@@ -6,13 +6,13 @@
   <defs>
     <style>
       .Icon__main--icon{
-        fill: #fec149;
+        fill: #00e020;
         text-decoration: none;
         transition: all .3s;
       }
       
       .Icon__main:hover .Icon__main--icon {
-        fill: #c29437;
+        fill: #00c020;
       }
     </style>
   </defs>

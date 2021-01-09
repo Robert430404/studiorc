@@ -5,6 +5,7 @@ import Header from './header';
 import './../css/normalize.css';
 import './../css/fonts.css';
 import './../css/index.css';
+import './../css/crt.css';
 
 const App = () => {
   const component = CreateComponent(document.createElement('section'));
@@ -19,6 +20,8 @@ const App = () => {
   if (!body) {
     throw Error('Something is very wrong, there is no body');
   }
+
+  body.classList.add('crt');
 
   body.append(component);
 
