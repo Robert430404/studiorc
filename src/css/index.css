@@ -87,8 +87,7 @@ object {
   outline: none;
 }
 
-.Main__wrapper--externalLink:hover,
-.Main__wrapper--telLink:hover {
+.Main__wrapper--externalLink:hover {
   color: var(--fontHighLight);
 }
 
