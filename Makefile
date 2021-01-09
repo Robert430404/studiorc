@@ -6,3 +6,5 @@ dev:
 	npm run start
 lint:
 	npm run lint
+deploy:
+	./build.sh
