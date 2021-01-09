@@ -1,11 +1,10 @@
 import CreateComponent from './component';
 import Header from './header';
+import Footer from './footer';
 
 /** Import application styles */
-import './../css/normalize.css';
-import './../css/fonts.css';
-import './../css/index.css';
 import './../css/crt.css';
+import Content from './content';
 
 const App = () => {
   const component = CreateComponent(document.createElement('section'));
@@ -13,6 +12,8 @@ const App = () => {
   component.classList.add('Main__wrapper');
 
   component.append(Header());
+  component.append(Content());
+  component.append(Footer());
 
   // Grab the body from the page
   const body = document.body;
@@ -21,7 +22,7 @@ const App = () => {
     throw Error('Something is very wrong, there is no body');
   }
 
-  body.classList.add('crt');
+  body.classList.add('CRT');
 
   body.append(component);
 

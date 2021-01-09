@@ -1,0 +1,36 @@
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Blink {
+  display: inline-block;
+  background-color: #ccfc9c;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 1ch;
+  animation: blink 0.5s linear infinite;
+}
+
+.Blink_block {
+  width: 1ch;
+  height: 43px;
+}
+
+.Blink_dash {
+  width: 1ch;
+  height: 5px;
+}

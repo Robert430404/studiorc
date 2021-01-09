@@ -1,3 +1,4 @@
+import Blinker, { Type } from './blinker';
 import CreateComponent, { Component } from './component';
 import Heading, { HeadingTags } from './heading';
 
@@ -18,6 +19,12 @@ const Title = (): Component => {
 
           return span;
         })(),
+      );
+
+      component.appendChild(
+        Blinker({
+          type: Type.Dash,
+        }),
       );
 
       return component;
