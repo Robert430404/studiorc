@@ -6,6 +6,11 @@
   --sectionGap: 24px;
 }
 
+@font-face {
+  font-family: 'VT323';
+  src: url('./../fonts/VT323-Regular.ttf');
+}
+
 @media (max-width: 500px) {
   :root {
     --fontSize: 18px;

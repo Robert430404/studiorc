@@ -8,7 +8,7 @@ build-prod:
 
 # Starts the dev server
 start-dev:
-	npm run start
+	npm run start-dev
 
 # Runs a lint
 lint:
