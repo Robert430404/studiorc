@@ -1,10 +1,18 @@
 import CreateComponent from './component';
 import Header from './header';
 import Footer from './footer';
-
-/** Import application styles */
-import './../css/crt.css';
 import Content from './content';
+import { FontFaceSet } from 'css-font-loading-module';
+
+import './../css/crt.css';
+
+const removeLoader = (event: FontFaceSet) => {
+  const loader = CreateComponent(document.querySelector('.Loader'));
+
+  if (loader && event.check('12px VT323')) {
+    loader.remove();
+  }
+};
 
 const App = () => {
   const component = CreateComponent(document.createElement('section'));
@@ -23,12 +31,9 @@ const App = () => {
   }
 
   body.classList.add('CRT');
-
   body.append(component);
 
-  const loader = CreateComponent(document.querySelector('.Loader'));
-
-  loader.remove();
+  document.fonts.ready.then(removeLoader);
 };
 
 export default App;
