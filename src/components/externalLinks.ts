@@ -20,7 +20,6 @@ const ExternalLinks = (): Component => {
   component.appendChild(linkedin);
 
   document.addEventListener('keydown', (event: KeyboardEvent) => {
-    console.log(event);
     const { key } = event;
 
     if (key === '1') {
