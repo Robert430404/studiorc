@@ -10,6 +10,10 @@ build-prod:
 start-dev:
 	npm run start-dev
 
+# Runs unit tests
+test:
+	npm run test
+
 # Runs a lint
 lint:
 	npm run lint
