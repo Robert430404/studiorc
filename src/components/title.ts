@@ -1,12 +1,12 @@
 import Blinker, { Type } from './blinker';
-import CreateComponent, { Component } from './component';
+import { Component } from './component';
 import Heading, { HeadingTags } from './heading';
 
 const Title = (): Component => {
   return Heading({
     element: HeadingTags.h1,
-    content: ((): Component => {
-      const component = CreateComponent(document.createDocumentFragment());
+    content: ((): DocumentFragment => {
+      const component = document.createDocumentFragment();
 
       component.appendChild(document.createTextNode('Studio '));
 

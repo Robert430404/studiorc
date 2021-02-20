@@ -1,11 +1,11 @@
-import CreateComponent, { Component } from './component';
+import { Component } from './component';
 import Heading, { HeadingTags } from './heading';
 
 const SubTitle = (): Component => {
   return Heading({
     element: HeadingTags.h2,
-    content: ((): Component => {
-      const component = CreateComponent(document.createDocumentFragment());
+    content: ((): DocumentFragment => {
+      const component = document.createDocumentFragment();
 
       component.appendChild(
         document.createTextNode('Just a simple guy who enjoys '),
