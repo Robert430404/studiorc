@@ -15,6 +15,7 @@ describe('Blinker', () => {
       type: Type.Dash,
     });
 
+    expect(blinker.tagName).to.equal('SPAN');
     expect(blinker.classList.contains('Blink')).to.be.true;
     expect(blinker.classList.contains('Blink_dash')).to.be.true;
   });
@@ -24,6 +25,7 @@ describe('Blinker', () => {
       type: Type.Block,
     });
 
+    expect(blinker.tagName).to.equal('SPAN');
     expect(blinker.classList.contains('Blink')).to.be.true;
     expect(blinker.classList.contains('Blink_block')).to.be.true;
   });
