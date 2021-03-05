@@ -6,7 +6,8 @@ export interface Component extends HTMLElement {
   applyStyles: (styles?: CSSStyleDeclaration) => Component;
 }
 
-const isComponent = (x: any): x is Component => typeof x.applyStyles !== 'undefined';
+const isComponent = (x: any): x is Component =>
+  typeof x.applyStyles !== 'undefined';
 
 /** Creates a component instance from an element */
 const CreateComponent = (element: HTMLElement): Component => {

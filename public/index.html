@@ -27,14 +27,30 @@
         width: 100vw;
         height: 100vh;
         background: #0b0b0b;
-        font-family: 'VT323', monospace;
       "
     >
       <p
         class="Loader_text"
-        style="color: #00c020; text-align: center; margin-top: 50vh"
+        style="
+          color: #00c020;
+          text-align: center;
+          margin-top: 50vh;
+          font-family: monospace;
+          font-size: 14px;
+          font-weight: 300;
+        "
       >
         Loading...
+        <span
+          style="
+            font-size: 12px;
+            font-family: 'VT323', monospace;
+            position: fixed;
+            top: -999999px;
+            left: -9999999px;
+          "
+          >...</span
+        >
       </p>
     </section>
   </body>
