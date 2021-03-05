@@ -11,7 +11,21 @@ describe('App', () => {
   });
 
   it('Should Bootstrap The App', () => {
-    // Render the component
+    // Attach the app to the document body
     App();
+
+    expect(
+      global
+        .document
+        .querySelector('.Main__wrapper')
+    ).to.not.be.undefined;
+    
+    expect(
+      global
+        .document
+        .body
+        .classList
+        .contains('CRT')
+    ).to.be.true;
   });
 });

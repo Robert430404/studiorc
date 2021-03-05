@@ -1,40 +1,30 @@
+import { JSDOM } from 'jsdom';
 import Blinker, { Type } from './blinker';
 import { expect } from 'chai';
 import 'mocha';
 
 describe('Blinker', () => {
-  it('Should Create A Component', () => {
-    let addCalled = 0;
-    // Mock document for this test.
-    global.document = {
-      createElement: (type: string) => {
-        expect(type).to.be.a('string');
-        expect(type).to.equal('span');
+  beforeEach(() => {
+    const dom = new JSDOM();
 
-        return {
-          classList: {
-            add: (className: string) => {
-              expect(className).to.be.a('string');
-              if (addCalled === 0) {
-                expect(className).to.equal('Blink');
-              }
+    global.document = dom.window.document;
+  });
 
-              if (addCalled === 1) {
-                expect(className).to.equal(`Blink_${Type.Dash}`);
-              }
-
-              addCalled++;
-
-              return {};
-            },
-          },
-        };
-      },
-    } as any;
-
-    // Render the component
+  it('Should Create A Dash Blinker', () => {
     const blinker = Blinker({
       type: Type.Dash,
     });
+
+    expect(blinker.classList.contains('Blink')).to.be.true;
+    expect(blinker.classList.contains('Blink_dash')).to.be.true;
+  });
+
+  it('Should Create A Block Blinker', () => {
+    const blinker = Blinker({
+      type: Type.Block,
+    });
+
+    expect(blinker.classList.contains('Blink')).to.be.true;
+    expect(blinker.classList.contains('Blink_block')).to.be.true;
   });
 });
