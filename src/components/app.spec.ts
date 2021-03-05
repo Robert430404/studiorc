@@ -14,18 +14,8 @@ describe('App', () => {
     // Attach the app to the document body
     App();
 
-    expect(
-      global
-        .document
-        .querySelector('.Main__wrapper')
-    ).to.not.be.undefined;
-    
-    expect(
-      global
-        .document
-        .body
-        .classList
-        .contains('CRT')
-    ).to.be.true;
+    expect(global.document.querySelector('.Main__wrapper')).to.not.be.undefined;
+
+    expect(global.document.body.classList.contains('CRT')).to.be.true;
   });
 });
