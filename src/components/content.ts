@@ -1,5 +1,5 @@
 import ByLine from './byline';
-import CreateComponent, { Component } from './component';
+import CreateComponent, { Component } from '../core/component';
 import ExternalLinks from './externalLinks';
 
 const Content = (): Component => {

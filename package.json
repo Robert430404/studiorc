@@ -7,7 +7,7 @@
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha --require ts-node/register --require ignore-styles --ui bdd 'src/**/*.spec.*'",
     "build": "npm run lint && webpack --config webpack.dev.js",
     "build:prod": "npm run lint && webpack --config webpack.prod.js",
-    "start-dev": "webpack serve --config webpack.dev.js",
+    "start:dev": "webpack serve --config webpack.dev.js",
     "lint": "npx prettier --write ."
   },
   "repository": {

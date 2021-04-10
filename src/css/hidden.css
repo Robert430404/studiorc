@@ -1,0 +1,37 @@
+.Hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: #F00;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.Hidden--visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+  transition: none;
+}
+
+.Hidden::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 102;
+}
+
+.Hidden__iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 101
+}

@@ -1,4 +1,4 @@
-import { Component } from './component';
+import { Component } from '../core/component';
 import Heading, { HeadingTags } from './heading';
 
 const SubTitle = (): Component => {

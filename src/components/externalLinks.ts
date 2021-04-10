@@ -1,4 +1,4 @@
-import CreateComponent, { Component } from './component';
+import CreateComponent, { Component } from '../core/component';
 import { SocialLink } from './socialLink';
 
 const ExternalLinks = (): Component => {

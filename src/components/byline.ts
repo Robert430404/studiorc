@@ -1,4 +1,4 @@
-import CreateComponent, { Component } from './component';
+import CreateComponent, { Component } from '../core/component';
 
 const ByLine = (): Component => {
   const component = CreateComponent(document.createElement('p'));

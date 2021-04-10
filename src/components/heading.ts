@@ -1,6 +1,5 @@
-import CreateComponent, { Component, ComponentProperties } from './component';
+import CreateComponent, { Component, ComponentProperties } from '../core/component';
 
-/** Valid Heading Tags For The Component */
 export enum HeadingTags {
   h1 = 'h1',
   h2 = 'h2',

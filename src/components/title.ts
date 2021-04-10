@@ -1,5 +1,5 @@
 import Blinker, { Type } from './blinker';
-import { Component } from './component';
+import { Component } from '../core/component';
 import Heading, { HeadingTags } from './heading';
 
 const Title = (): Component => {

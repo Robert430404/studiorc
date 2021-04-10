@@ -1,4 +1,4 @@
-import CreateComponent, { Component, ComponentProperties } from './component';
+import CreateComponent, { Component, ComponentProperties } from '../core/component';
 
 interface Properties extends ComponentProperties {
   iconPath: string;

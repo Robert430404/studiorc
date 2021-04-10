@@ -1,4 +1,4 @@
-import CreateComponent, { Component } from './component';
+import CreateComponent, { Component } from '../core/component';
 import SubTitle from './subtitle';
 import Title from './title';
 
