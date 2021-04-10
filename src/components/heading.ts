@@ -1,4 +1,7 @@
-import CreateComponent, { Component, ComponentProperties } from '../core/component';
+import CreateComponent, {
+  Component,
+  ComponentProperties,
+} from '../core/component';
 
 export enum HeadingTags {
   h1 = 'h1',

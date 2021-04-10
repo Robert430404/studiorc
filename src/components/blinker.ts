@@ -1,4 +1,7 @@
-import CreateComponent, { Component, ComponentProperties } from '../core/component';
+import CreateComponent, {
+  Component,
+  ComponentProperties,
+} from '../core/component';
 
 import './../css/blink.css';
 

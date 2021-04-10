@@ -25,14 +25,22 @@ const App = () => {
   body.classList.add('CRT');
 
   body.append(component);
-  body.append(Hidden({
-    activationSequence: [
-      Keys.Up, Keys.Up,
-      Keys.Down, Keys.Down,
-      Keys.Left, Keys.Right, Keys.Left, Keys.Right,
-      Keys.B, Keys.A,
-    ]
-  }));
+  body.append(
+    Hidden({
+      activationSequence: [
+        Keys.Up,
+        Keys.Up,
+        Keys.Down,
+        Keys.Down,
+        Keys.Left,
+        Keys.Right,
+        Keys.Left,
+        Keys.Right,
+        Keys.B,
+        Keys.A,
+      ],
+    }),
+  );
 };
 
 export default App;
