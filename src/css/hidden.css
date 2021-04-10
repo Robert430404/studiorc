@@ -35,3 +35,9 @@
   height: 100%;
   z-index: 101;
 }
+
+@media (max-width: 500px) {
+  .Hidden::before {
+    display: none;
+  }
+}

@@ -34,10 +34,6 @@ const App = () => {
         Keys.Down,
         Keys.Left,
         Keys.Right,
-        Keys.Left,
-        Keys.Right,
-        Keys.B,
-        Keys.A,
       ],
     }),
   );
