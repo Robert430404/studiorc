@@ -1,4 +1,6 @@
 import CreateComponent, { Component } from '../core/component';
+import { ClassNames } from './label';
+import { Label } from './label';
 import { SocialLink } from './socialLink';
 
 const ExternalLinks = (): Component => {
@@ -6,15 +8,20 @@ const ExternalLinks = (): Component => {
 
   const github = SocialLink({
     link: 'https://github.com/Robert430404',
-    iconPath: './img/github.svg',
-    alt: '(1) github',
+    alt: '(1) GITHUB',
   });
 
   const linkedin = SocialLink({
     link: 'https://www.linkedin.com/in/robert430404/',
-    iconPath: './img/linkedin.svg',
-    alt: '(2) linkedin',
+    alt: '(2) LINKEDIN',
   });
+
+  component.appendChild(
+    Label({
+      content: 'Press: ',
+      modifiers: [ClassNames.ExternalLink],
+    }),
+  );
 
   component.appendChild(github);
   component.appendChild(linkedin);

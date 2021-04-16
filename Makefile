@@ -8,7 +8,7 @@ build-prod:
 
 # Starts the dev server
 start-dev:
-	npm run start-dev
+	npm run start:dev
 
 # Runs unit tests
 test:

@@ -101,6 +101,11 @@ object {
   font-weight: 300;
 }
 
+.Label--externalLink {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
 .Header,
 .Content,
 .Footer {

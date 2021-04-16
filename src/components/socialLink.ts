@@ -4,7 +4,6 @@ import CreateComponent, {
 } from '../core/component';
 
 interface Properties extends ComponentProperties {
-  iconPath: string;
   link: string;
   alt: string;
 }
@@ -20,20 +19,6 @@ export const SocialLink = (props: Properties): Component => {
   component.setAttribute('name', props.alt);
 
   component.classList.add('Main__wrapper--externalLink');
-
-  component.appendChild(
-    ((): HTMLObjectElement => {
-      const object = document.createElement('object');
-
-      object.setAttribute('type', 'image/svg+xml');
-      object.setAttribute('data', props.iconPath);
-      object.setAttribute('alt', props.alt);
-
-      object.appendChild(document.createTextNode(props.alt));
-
-      return object;
-    })(),
-  );
 
   component.appendChild(document.createTextNode(props.alt));
 
