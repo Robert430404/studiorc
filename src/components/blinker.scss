@@ -18,19 +18,13 @@
 
 .Blink {
   display: inline-block;
-  background-color: #ccfc9c;
+  background-color: var(--fontHighLight);
   text-align: center;
-  line-height: 50px;
   margin-left: 1ch;
   animation: blink 0.5s linear infinite;
 }
 
-.Blink_block {
-  width: 1ch;
-  height: 43px;
-}
-
-.Blink_dash {
+.Blink--dash {
   width: 1ch;
   height: 5px;
 }

@@ -3,24 +3,22 @@ import CreateComponent, {
   Component,
   ComponentProperties,
 } from '../core/component';
+import {
+  getTouchDirection,
+  StartCoordinates,
+  TouchDirections,
+} from '../core/touch';
+
+import './hidden.scss';
 import Video from './video';
 
-import '../css/hidden.css';
-
 type EnteredSequence = string[];
-
-type StartCoordinates = {
-  vertical: number;
-  horizontal: number;
-};
 
 export enum Keys {
   Left = 'ArrowLeft',
   Right = 'ArrowRight',
   Down = 'ArrowDown',
   Up = 'ArrowUp',
-  B = 'b',
-  A = 'a',
 }
 
 export enum ClassNames {
@@ -29,11 +27,18 @@ export enum ClassNames {
   IFrame = 'Hidden__iframe',
 }
 
+const touchMap = new Map<TouchDirections, Keys>();
+
+touchMap.set(TouchDirections.Up, Keys.Up);
+touchMap.set(TouchDirections.Down, Keys.Down);
+touchMap.set(TouchDirections.Left, Keys.Left);
+touchMap.set(TouchDirections.Right, Keys.Right);
+
 interface Properties extends ComponentProperties {
   activationSequence: Keys[];
 }
 
-const Hidden = ({ activationSequence }: Properties): Component => {
+const Hidden = ({ activationSequence: sequence }: Properties): Component => {
   const component: Component = CreateComponent(document.createElement('div'));
   const [enteredSequence, setEnteredSequence] = useState<EnteredSequence>([]);
   const [touchStart, setTouchStart] = useState<StartCoordinates>({
@@ -41,97 +46,63 @@ const Hidden = ({ activationSequence }: Properties): Component => {
     vertical: 0,
   });
 
-  const activateVideo = () => {
-    component.append(Video());
+  const handleActivation = (): void => {
+    const entered = getState<EnteredSequence>(enteredSequence);
 
-    component.classList.add(ClassNames.Visible);
+    if (sequence.filter((v) => entered.indexOf(v) > -1).length === 6) {
+      component.append(Video());
 
-    setEnteredSequence([]);
+      component.classList.add(ClassNames.Visible);
+
+      setEnteredSequence([]);
+    }
   };
 
   const handleKeyDown = (event: KeyboardEvent) => {
     const entered = getState<EnteredSequence>(enteredSequence);
 
-    if (entered.length >= activationSequence.length) {
+    if (entered.length >= sequence.length) {
       entered.shift();
     }
 
     entered.push(event.key);
 
     setEnteredSequence(entered);
-
-    if (
-      activationSequence.filter((v) => entered.indexOf(v) > -1).length === 6
-    ) {
-      activateVideo();
-    }
+    handleActivation();
   };
 
-  component.classList.add(ClassNames.Block);
-
-  document.addEventListener('keydown', handleKeyDown);
-
-  document.addEventListener('touchstart', ({ changedTouches }: TouchEvent) => {
+  const handleTouchStart = ({ changedTouches }: TouchEvent) => {
     const { clientX, clientY } = changedTouches.item(0);
 
     setTouchStart({
       horizontal: clientX,
       vertical: clientY,
     });
-  });
+  };
 
-  document.addEventListener('touchend', ({ changedTouches }: TouchEvent) => {
+  const handleTouchEnd = (event: TouchEvent) => {
     const entered = getState<EnteredSequence>(enteredSequence);
-    const { clientX, clientY } = changedTouches.item(0);
-    const { horizontal, vertical } = getState<StartCoordinates>(touchStart);
-    const { verticalDiff, horizontalDiff, verticalChange, horizontalChange } = {
-      verticalDiff: clientY - vertical,
-      horizontalDiff: clientX - horizontal,
-      verticalChange: ((): number =>
-        clientY - vertical < 0
-          ? (clientY - vertical) * -1
-          : clientY - vertical)(),
-      horizontalChange: ((): number =>
-        clientX - horizontal < 0
-          ? (clientX - horizontal) * -1
-          : clientX - horizontal)(),
-    };
+    const startCoordinates = getState<StartCoordinates>(touchStart);
 
-    // If no diff, break out
-    if (verticalDiff === 0 && horizontalDiff === 0) {
-      return;
-    }
-
-    if (entered.length >= activationSequence.length) {
+    if (entered.length >= sequence.length) {
       entered.shift();
     }
 
-    if (verticalChange > horizontalChange) {
-      if (verticalDiff > 0 && verticalDiff > horizontalDiff) {
-        entered.push(Keys.Down);
-      }
+    try {
+      const touchDirection = getTouchDirection(startCoordinates, event);
 
-      if (verticalDiff < 0 && verticalDiff < horizontalDiff) {
-        entered.push(Keys.Up);
-      }
-    } else {
-      if (horizontalDiff > 0 && verticalDiff < horizontalDiff) {
-        entered.push(Keys.Right);
-      }
+      entered.push(touchMap.get(touchDirection));
 
-      if (horizontalDiff < 0 && verticalDiff > horizontalDiff) {
-        entered.push(Keys.Left);
-      }
-    }
+      setEnteredSequence(entered);
+      handleActivation();
+    } catch {}
+  };
 
-    setEnteredSequence(entered);
+  component.classList.add(ClassNames.Block);
 
-    if (
-      activationSequence.filter((v) => entered.indexOf(v) > -1).length === 6
-    ) {
-      activateVideo();
-    }
-  });
+  document.addEventListener('keydown', handleKeyDown);
+  document.addEventListener('touchstart', handleTouchStart);
+  document.addEventListener('touchend', handleTouchEnd);
 
   return component;
 };

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'VT323';
+  src: url('./fonts/VT323-Regular.ttf');
+}
+
+:root {
+  /* Background settings */
+  --backgroundColor: #0b0b0b;
+
+  /* Font settings */
+  --fontSize: 24px;
+  --font: #00c020;
+  --fontHighLight: #06ff2f;
+  --textShadow: 2px 2px 0px #000;
+
+  /* Layout settings */
+  --sectionGap: 24px;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --fontSize: 18px;
+  }
+}
+
+html {
+  font-size: var(--fontSize);
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--font);
+  font-family: 'VT323', monospace;
+  text-align: left;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+}

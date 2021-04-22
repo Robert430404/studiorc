@@ -1,0 +1,8 @@
+.SocialLink {
+  color: var(--fontHighLight);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

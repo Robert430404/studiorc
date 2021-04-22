@@ -2,8 +2,9 @@ import App from './components/app';
 import CreateComponent from './core/component';
 import { FontFaceSet } from 'css-font-loading-module';
 
-import './css/normalize.css';
-import './css/index.css';
+import './styles/normalize.scss';
+import './styles/crt.scss';
+import './index.scss';
 
 // Bootstrap the application into the DOM
 document.fonts.ready.then((event: FontFaceSet) => {

@@ -1,7 +1,13 @@
 import CreateComponent, { Component } from '../core/component';
-import { ClassNames } from './label';
+import { ClassNames as LabelClassNames } from './label';
 import { Label } from './label';
 import { SocialLink } from './socialLink';
+
+import './externalLinks.scss';
+
+enum ClassNames {
+  Block = 'ExternalLinks',
+}
 
 const ExternalLinks = (): Component => {
   const component = CreateComponent(document.createElement('nav'));
@@ -16,14 +22,17 @@ const ExternalLinks = (): Component => {
     alt: '(2) LINKEDIN',
   });
 
+  component.classList.add(ClassNames.Block);
+
   component.appendChild(
     Label({
       content: 'Press: ',
-      modifiers: [ClassNames.ExternalLink],
+      modifiers: [LabelClassNames.ExternalLink],
     }),
   );
 
   component.appendChild(github);
+  component.appendChild(document.createTextNode(' '));
   component.appendChild(linkedin);
 
   document.addEventListener('keydown', (event: KeyboardEvent) => {

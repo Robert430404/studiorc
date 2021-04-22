@@ -3,11 +3,16 @@ import CreateComponent, {
   ComponentProperties,
 } from '../core/component';
 
-import './../css/blink.css';
+import './blinker.scss';
+
+enum ClassNames {
+  Block = 'Blink',
+  Dash = 'Blink--dash',
+  Square = 'Blink--square',
+}
 
 export enum Type {
   Dash = 'dash',
-  Block = 'block',
 }
 
 interface Properties extends ComponentProperties {
@@ -19,8 +24,8 @@ const Blinker = (props: Properties): Component => {
     props.styles,
   );
 
-  component.classList.add('Blink');
-  component.classList.add(`Blink_${props.type}`);
+  component.classList.add(ClassNames.Block);
+  component.classList.add(ClassNames.Dash);
 
   return component;
 };

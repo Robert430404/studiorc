@@ -3,6 +3,12 @@ import CreateComponent, {
   ComponentProperties,
 } from '../core/component';
 
+import './socialLink.scss';
+
+enum ClassNames {
+  Block = 'SocialLink',
+}
+
 interface Properties extends ComponentProperties {
   link: string;
   alt: string;
@@ -18,7 +24,7 @@ export const SocialLink = (props: Properties): Component => {
   component.setAttribute('rel', 'noreferrer');
   component.setAttribute('name', props.alt);
 
-  component.classList.add('Main__wrapper--externalLink');
+  component.classList.add(ClassNames.Block);
 
   component.appendChild(document.createTextNode(props.alt));
 

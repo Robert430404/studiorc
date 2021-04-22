@@ -19,14 +19,4 @@ describe('Blinker', () => {
     expect(blinker.classList.contains('Blink')).to.be.true;
     expect(blinker.classList.contains('Blink_dash')).to.be.true;
   });
-
-  it('Should Create A Block Blinker', () => {
-    const blinker = Blinker({
-      type: Type.Block,
-    });
-
-    expect(blinker.tagName).to.equal('SPAN');
-    expect(blinker.classList.contains('Blink')).to.be.true;
-    expect(blinker.classList.contains('Blink_block')).to.be.true;
-  });
 });

@@ -1,9 +1,14 @@
 import CreateComponent, { Component } from '../core/component';
 
+enum ClassNames {
+  Block = 'Copyright',
+  Bold = 'Copyright--bold',
+}
+
 const Copyright = (): Component => {
   const component = CreateComponent(document.createElement('section'));
 
-  component.classList.add('Main__wrapper--copyright');
+  component.classList.add(ClassNames.Block);
 
   component.appendChild(document.createTextNode('Copyright \u00A9 '));
 
@@ -11,7 +16,7 @@ const Copyright = (): Component => {
     ((): HTMLSpanElement => {
       const content = document.createElement('span');
 
-      content.classList.add('Main__wrapper--bold');
+      content.classList.add(ClassNames.Bold);
 
       content.appendChild(
         document.createTextNode(new Date().getFullYear().toString()),
