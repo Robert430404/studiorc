@@ -1,8 +1,6 @@
-import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
-import 'mocha';
 
-import Blinker, { Type } from 'components/blinker';
+import Blinker from 'components/blinker';
 
 describe('Blinker', () => {
   beforeEach(() => {
@@ -12,12 +10,10 @@ describe('Blinker', () => {
   });
 
   it('Should Create A Dash Blinker', () => {
-    const blinker = Blinker({
-      type: Type.Dash,
-    });
+    const blinker = Blinker();
 
-    expect(blinker.tagName).to.equal('SPAN');
-    expect(blinker.classList.contains('Blink')).to.be.true;
-    expect(blinker.classList.contains('Blink_dash')).to.be.true;
+    expect(blinker.tagName).toEqual('SPAN');
+    expect(blinker.classList.contains('Blink')).toBeTruthy;
+    expect(blinker.classList.contains('Blink_dash')).toBeTruthy;
   });
 });
