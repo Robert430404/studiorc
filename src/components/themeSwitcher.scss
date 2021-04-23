@@ -10,6 +10,17 @@
   background: var(--themeSwitcherBackground);
   padding: 12px;
   border-radius: 12px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+
+@media (max-width: 610px) {
+  .ThemeSwitcher {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+  }
 }
