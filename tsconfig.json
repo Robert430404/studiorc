@@ -11,5 +11,5 @@
     "plugins": [{ "transform": "@zerollup/ts-transform-paths" }],
     "baseUrl": "./src"
   },
-  "exclude": ["webpack.*.js", "public/dist"]
+  "exclude": ["webpack.*.js", "public/dist", "*.spec.*"]
 }
