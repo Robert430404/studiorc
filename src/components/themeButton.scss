@@ -1,15 +1,38 @@
 :root {
-  --themeButtonBackground: rgba(00, 00, 00, 0.15);
+  --darkThemeButtonBackground: rgba(00, 00, 00, 0.15);
+  --lightThemeButtonBackground: rgba(255, 255, 255, 0.15);
+  --boxShadow: 0 0 10px rgba(00,00,00, .5);
 }
 
 .ThemeButton {
+  position: relative;
+  z-index: 1;
   width: 30px;
   height: 30px;
-  background-color: var(--themeButtonBackground);
+  background-color: var(--darkThemeButtonBackground);
   border: none;
-  border-radius: 12px;
   display: block;
   color: inherit;
   text-transform: uppercase;
   text-align: center;
+  border-radius: 0;
+  cursor: pointer;
+  transition: box-shadow .3s;
+
+  &:hover {
+    box-shadow: var(--boxShadow);
+    z-index: 2;
+  }
+
+  &:first-child {
+    border-radius: 12px 0 0 12px;
+  }
+
+  &:last-child {
+    border-radius: 0 12px 12px 0;
+  }
+
+  &[data-theme="LightTheme"] {
+    background-color: var(--lightThemeButtonBackground);
+  }
 }
