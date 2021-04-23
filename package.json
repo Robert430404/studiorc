@@ -25,10 +25,12 @@
   },
   "homepage": "https://github.com/Robert430404/studiorc#readme",
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
     "@types/chai": "^4.2.14",
     "@types/css-font-loading-module": "0.0.4",
     "@types/jsdom": "^16.2.6",
     "@types/mocha": "^8.2.0",
+    "@zerollup/ts-transform-paths": "^1.7.18",
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",

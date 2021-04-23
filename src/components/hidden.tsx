@@ -1,16 +1,15 @@
-import { getState, useState } from '../core/hooks/state';
-import CreateComponent, {
-  Component,
-  ComponentProperties,
-} from '../core/component';
+import 'components/hidden.scss';
+
+import { getState, useState } from 'core/hooks/state';
+import { generateId } from 'core/ids';
+import JSXFactory from 'core/jsx';
 import {
   getTouchDirection,
   StartCoordinates,
   TouchDirections,
-} from '../core/touch';
+} from 'core/touch';
 
-import './hidden.scss';
-import Video from './video';
+import Video from 'components/video';
 
 type EnteredSequence = string[];
 
@@ -34,12 +33,12 @@ touchMap.set(TouchDirections.Down, Keys.Down);
 touchMap.set(TouchDirections.Left, Keys.Left);
 touchMap.set(TouchDirections.Right, Keys.Right);
 
-interface Properties extends ComponentProperties {
+interface Properties {
   activationSequence: Keys[];
 }
 
-const Hidden = ({ activationSequence: sequence }: Properties): Component => {
-  const component: Component = CreateComponent(document.createElement('div'));
+const Hidden = ({ activationSequence: sequence }: Properties) => {
+  const id = generateId('hidden_easteregg');
   const [enteredSequence, setEnteredSequence] = useState<EnteredSequence>([]);
   const [touchStart, setTouchStart] = useState<StartCoordinates>({
     horizontal: 0,
@@ -48,6 +47,7 @@ const Hidden = ({ activationSequence: sequence }: Properties): Component => {
 
   const handleActivation = (): void => {
     const entered = getState<EnteredSequence>(enteredSequence);
+    const component = document.getElementById(id);
 
     if (sequence.filter((v) => entered.indexOf(v) > -1).length === 6) {
       component.append(Video());
@@ -98,13 +98,11 @@ const Hidden = ({ activationSequence: sequence }: Properties): Component => {
     } catch {}
   };
 
-  component.classList.add(ClassNames.Block);
-
   document.addEventListener('keydown', handleKeyDown);
   document.addEventListener('touchstart', handleTouchStart);
   document.addEventListener('touchend', handleTouchEnd);
 
-  return component;
+  return <div classes={[ClassNames.Block]} id={id}></div>;
 };
 
 export default Hidden;

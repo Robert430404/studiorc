@@ -1,4 +1,5 @@
 const path = require('path');
+const tsTransformPaths = require('@zerollup/ts-transform-paths');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -24,8 +25,18 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
+        options: {
+          getCustomTransformers: (program) => {
+            const transformer = tsTransformPaths(program);
+
+            return {
+              before: [transformer.before],
+              afterDeclarations: [transformer.afterDeclarations],
+            };
+          },
+        },
       },
       {
         test: /\.scss?$/,
@@ -48,7 +59,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   output: {
     filename: '[name].bundle.js',

@@ -1,7 +1,8 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
 import 'mocha';
-import App from './app';
+
+import App from 'components/app';
 
 describe('App', () => {
   beforeEach(() => {

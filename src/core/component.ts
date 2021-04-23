@@ -1,6 +1,7 @@
 // Sets up the base interface that all component properties support
 export interface ComponentProperties {
   styles?: CSSStyleDeclaration;
+  children?: any;
 }
 
 // Defines the properties of a component

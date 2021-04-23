@@ -1,19 +1,23 @@
 @font-face {
   font-family: 'VT323';
-  src: url('./fonts/VT323-Regular.ttf');
+  src: url('fonts/VT323-Regular.ttf');
 }
 
 :root {
-  /* Background settings */
-  --backgroundColor: #0b0b0b;
+  /* Dark Theme settings */
+  --darkBackgroundColor: #0b0b0b;
+  --darkFont: #00c020;
+  --darkFontHighLight: #06ff2f;
+  --darkTextShadow: 2px 2px 0px #000;
 
-  /* Font settings */
-  --fontSize: 24px;
-  --font: #00c020;
-  --fontHighLight: #06ff2f;
-  --textShadow: 2px 2px 0px #000;
+  /* Light Theme settings */
+  --lightBackgroundColor: #ecedee;
+  --lightFont: #1b1b1b;
+  --lightFontHighLight: #3b3b3b;
+  --lightTextShadow: 2px 2px 0px #000;
 
   /* Layout settings */
+  --fontSize: 24px;
   --sectionGap: 24px;
 }
 
@@ -28,12 +32,17 @@ html {
 }
 
 body {
-  background: var(--backgroundColor);
-  color: var(--font);
+  background: var(--darkBackgroundColor);
+  color: var(--darkFont);
   font-family: 'VT323', monospace;
   text-align: left;
   display: grid;
   justify-items: center;
   align-items: center;
   min-height: 100vh;
+}
+
+body[data-theme='LightTheme'] {
+  background: var(--lightBackgroundColor);
+  color: var(--lightFont);
 }

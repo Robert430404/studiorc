@@ -1,0 +1,15 @@
+:root {
+  --themeSwitcherBackground: rgba(255, 255, 255, 0.15);
+}
+
+.ThemeSwitcher {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: var(--themeSwitcherBackground);
+  padding: 12px;
+  border-radius: 12px;
+  display: grid;
+  gap: 12px;
+}

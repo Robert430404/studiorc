@@ -1,0 +1,15 @@
+:root {
+  --themeButtonBackground: rgba(00, 00, 00, 0.15);
+}
+
+.ThemeButton {
+  width: 30px;
+  height: 30px;
+  background-color: var(--themeButtonBackground);
+  border: none;
+  border-radius: 12px;
+  display: block;
+  color: inherit;
+  text-transform: uppercase;
+  text-align: center;
+}

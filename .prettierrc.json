@@ -1,5 +1,7 @@
 {
   "printWidth": 80,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "importOrder": ["^core/(.*)$", "^components/((?!scss).)*$", "^[./]"],
+  "importOrderSeparation": true
 }

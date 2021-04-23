@@ -1,7 +1,8 @@
-import { JSDOM } from 'jsdom';
-import Blinker, { Type } from './blinker';
 import { expect } from 'chai';
+import { JSDOM } from 'jsdom';
 import 'mocha';
+
+import Blinker, { Type } from 'components/blinker';
 
 describe('Blinker', () => {
   beforeEach(() => {
