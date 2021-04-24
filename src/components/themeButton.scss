@@ -1,7 +1,7 @@
 :root {
   --darkThemeButtonBackground: rgba(00, 00, 00, 0.15);
   --lightThemeButtonBackground: rgba(255, 255, 255, 0.15);
-  --boxShadow: 0 0 10px rgba(00,00,00, .5);
+  --boxShadow: 0 0 10px rgba(00, 00, 00, 0.5);
 }
 
 .ThemeButton {
@@ -17,7 +17,7 @@
   text-align: center;
   border-radius: 0;
   cursor: pointer;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
 
   &:hover {
     box-shadow: var(--boxShadow);
@@ -32,7 +32,7 @@
     border-radius: 0 12px 12px 0;
   }
 
-  &[data-theme="LightTheme"] {
+  &[data-theme='LightTheme'] {
     background-color: var(--lightThemeButtonBackground);
   }
 }
