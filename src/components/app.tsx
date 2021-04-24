@@ -23,6 +23,7 @@ const App = () => {
   }
 
   body.classList.add(ClassNames.CRT);
+  body.style.removeProperty('background');
 
   return (
     <section classes={[ClassNames.Block]}>

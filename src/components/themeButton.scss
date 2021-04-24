@@ -25,14 +25,26 @@
   }
 
   &:first-child {
-    border-radius: 12px 0 0 12px;
+    border-radius: 12px 12px 0 0;
   }
 
   &:last-child {
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 0 12px 12px;
   }
 
   &[data-theme='LightTheme'] {
     background-color: var(--lightThemeButtonBackground);
+  }
+}
+
+@media (max-width: 610px) {
+  .ThemeButton {
+    &:first-child {
+      border-radius: 12px 0 0 12px;
+    }
+
+    &:last-child {
+      border-radius: 0 12px 12px 0;
+    }
   }
 }
