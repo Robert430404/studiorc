@@ -19,6 +19,7 @@ lint:
 	npm run lint
 
 # Deploys a fresh build to docker hub
-deploy: build-prod
-	@echo 'Deploying build'
-	scp -r ${PWD}/dist/* studiorc-server:/root/sites/studiorclv.com
+deploy: lint build-prod
+	@echo 'Pushing image to registry'
+	podman build --tag registry.digitalocean.com/studiorc/server-one:studiorclv-latest .
+	podman push registry.digitalocean.com/studiorc/server-one:studiorclv-latest
