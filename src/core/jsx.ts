@@ -5,23 +5,41 @@ import {
   isClassList,
 } from 'core/guards/jsxGuards';
 
+// Defines the interface for a JSX element
+interface JSXElement {
+  id?: string;
+  classes?: string[];
+  events?: { name: string; handler: Function }[];
+  href?: string;
+  alt?: string;
+  target?: string;
+  rel?: string;
+  src?: string;
+  frameborder?: string;
+  allowfullscreen?: string;
+  title?: string;
+  height?: string;
+  width?: string;
+  allow?: string;
+}
+
 // Define the elements our JSX Factory supports
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      div: any;
-      button: any;
-      iframe: any;
-      section: any;
-      header: any;
-      footer: any;
-      nav: any;
-      span: any;
-      h1: any;
-      h2: any;
-      br: any;
-      a: any;
-      p: any;
+      div: JSXElement;
+      button: JSXElement;
+      iframe: JSXElement;
+      section: JSXElement;
+      header: JSXElement;
+      footer: JSXElement;
+      nav: JSXElement;
+      span: JSXElement;
+      h1: JSXElement;
+      h2: JSXElement;
+      br: JSXElement;
+      a: JSXElement;
+      p: JSXElement;
     }
   }
 }

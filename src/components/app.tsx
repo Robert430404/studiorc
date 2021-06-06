@@ -7,7 +7,7 @@ import Footer from 'components/footer';
 import Header from 'components/header';
 import Hidden, { Keys } from 'components/hidden';
 import SubTitle from 'components/subtitle';
-import ThemeSwitcher from 'components/themeSwitcher';
+import ThemeSwitcher, { getActiveTheme } from 'components/themeSwitcher';
 
 enum ClassNames {
   Block = 'App',
@@ -24,6 +24,7 @@ const App = () => {
 
   body.classList.add(ClassNames.CRT);
   body.style.removeProperty('background');
+  body.dataset.theme = getActiveTheme();
 
   return (
     <section classes={[ClassNames.Block]}>

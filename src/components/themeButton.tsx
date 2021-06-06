@@ -2,7 +2,7 @@ import 'components/themeButton.scss';
 
 import JSXFactory from 'core/jsx';
 
-import { Themes } from 'components/themeSwitcher';
+import { setActiveTheme, Themes } from 'components/themeSwitcher';
 
 enum ClassNames {
   Block = 'ThemeButton',
@@ -15,6 +15,8 @@ interface Properties {
 export const ThemeButton = (props: Properties) => {
   const handleClick = () => {
     document.body.dataset.theme = props.theme;
+
+    setActiveTheme(props.theme);
   };
 
   return (
