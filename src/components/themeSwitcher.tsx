@@ -42,7 +42,6 @@ export const setActiveTheme = (theme: Themes): void => {
   setCookie({
     key: ThemeCookie.Name,
     value: theme,
-    expiration: new Date(new Date().valueOf() + 1 * 60 * 60 * 24 * 7),
   });
 };
 
