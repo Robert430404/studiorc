@@ -5,11 +5,10 @@
   align-content: center;
   grid-template-rows: 1fr auto auto auto 1fr;
   grid-template-columns: 100%;
-  grid-template-areas: 
-    "header"
-    "sub-title"
-    "content"
-    "copyright"
-    "theme-switcher"  
-  ;
+  grid-template-areas:
+    'header'
+    'sub-title'
+    'content'
+    'copyright'
+    'theme-switcher';
 }
