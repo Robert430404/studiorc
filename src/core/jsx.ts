@@ -46,59 +46,67 @@ declare global {
 
 // Handles creating the actual elements from the JSX
 class JSXFactory {
+  /**
+   * Handles adding the event listeners to the element
+   */
+  private static handleElementEvents = (
+    element: HTMLElement,
+    events: ElementEvents,
+  ) => {
+    events.forEach((event) => {
+      element.addEventListener(event.name, event.handler);
+    });
+  };
+
+  /**
+   * Handles child elements for the parent
+   */
+  private static handleChildren = (element: HTMLElement, children: any[]) => {
+    children.forEach((child: any) => element.append(child));
+  };
+
+  /**
+   * Ingests the element when JSX is used to describe markup
+   */
   public static CreateJSXComponent = (
     tag: any,
     props: any,
     ...children: any
   ): HTMLElement => {
-    let element: HTMLElement;
-
-    // Create the element
-    if (typeof tag === 'function') {
-      element = tag(props);
-    } else {
-      element = document.createElement(tag);
-    }
-
-    const handleElementEvents = (events: ElementEvents) => {
-      events.forEach((event) => {
-        element.addEventListener(event.name, event.handler);
-      });
-    };
-
-    const handleChildren = () => {
-      children.forEach((child: any) => element.append(child));
-    };
+    const element: HTMLElement =
+      typeof tag === 'function' ? tag(props) : document.createElement(tag);
 
     if (Array.isArray(children)) {
-      handleChildren();
+      JSXFactory.handleChildren(element, children);
     }
 
-    if (props) {
-      Object.keys(props).forEach((prop) => {
-        const value = props[prop];
+    if (!props) {
+      return element;
+    }
 
-        if (isElementEvents(value)) {
-          handleElementEvents(value);
+    Object.keys(props).forEach((prop) => {
+      const value = props[prop];
 
-          return;
-        }
+      if (isElementEvents(value)) {
+        JSXFactory.handleElementEvents(element, value);
 
-        if (isDataAttribute(prop)) {
-          element.setAttribute(prop, value);
+        return;
+      }
 
-          return;
-        }
-
-        if (prop === 'classes' && isClassList(value)) {
-          value.forEach((cssClass) => element.classList.add(cssClass));
-
-          return;
-        }
-
+      if (isDataAttribute(prop)) {
         element.setAttribute(prop, value);
-      });
-    }
+
+        return;
+      }
+
+      if (prop === 'classes' && isClassList(value)) {
+        value.forEach((cssClass) => element.classList.add(cssClass));
+
+        return;
+      }
+
+      element.setAttribute(prop, value);
+    });
 
     return element;
   };
