@@ -3,24 +3,12 @@
 }
 
 .ThemeSwitcher {
-  position: fixed;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
   background: var(--themeSwitcherBackground);
-  padding: 12px;
   border-radius: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0px;
-}
-
-@media (max-width: 610px) {
-  .ThemeSwitcher {
-    top: auto;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    flex-direction: row;
-  }
+  grid-area: theme-switcher;
+  align-self: end;
+  margin-bottom: var(--sectionGap);
 }

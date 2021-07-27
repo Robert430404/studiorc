@@ -18,7 +18,7 @@
 
 .Blink {
   display: inline-block;
-  background-color: var(--darkFontHighLight);
+  background-color: var(--nightFontHighLight);
   text-align: center;
   margin-left: 1ch;
   animation: blink 0.5s linear infinite;
@@ -29,8 +29,14 @@
   height: 5px;
 }
 
-body[data-theme='LightTheme'] {
+body[data-theme='DayTheme'] {
   .Blink {
-    background-color: var(--lightFontHighLight);
+    background-color: var(--dayFontHighLight);
+  }
+}
+
+body[data-theme='VaporTheme'] {
+  .Blink {
+    background-color: var(--vaporFontHighLight);
   }
 }

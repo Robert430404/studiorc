@@ -5,16 +5,22 @@
 
 :root {
   /* Dark Theme settings */
-  --darkBackgroundColor: #0b0b0b;
-  --darkFont: #00c020;
-  --darkFontHighLight: #06ff2f;
+  --nightBackgroundColor: #0b0b0b;
+  --nightFont: #00c020;
+  --nightFontHighLight: #06ff2f;
   --darkTextShadow: 2px 2px 0px #000;
 
   /* Light Theme settings */
-  --lightBackgroundColor: #ecedee;
-  --lightFont: #1b1b1b;
-  --lightFontHighLight: #3b3b3b;
+  --dayBackgroundColor: #ecedee;
+  --dayFont: #1b1b1b;
+  --dayFontHighLight: #3b3b3b;
   --lightTextShadow: 2px 2px 0px #000;
+
+  /* Light Theme settings */
+  --vaporBackgroundColor: #01cdfe;
+  --vaporFont: #1b1b1b;
+  --vaporFontHighLight: #ff71ce;
+  --vaporTextShadow: 2px 2px 0px #000;
 
   /* Layout settings */
   --fontSize: 24px;
@@ -32,8 +38,8 @@ html {
 }
 
 body {
-  background: var(--darkBackgroundColor);
-  color: var(--darkFont);
+  background: var(--nightBackgroundColor);
+  color: var(--nightFont);
   font-family: 'VT323', monospace;
   text-align: left;
   display: grid;
@@ -43,12 +49,17 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-body[data-theme='LightTheme'] {
-  background: var(--lightBackgroundColor);
-  color: var(--lightFont);
+body[data-theme='DayTheme'] {
+  background: var(--dayBackgroundColor);
+  color: var(--dayFont);
 }
 
-body[data-theme='DarkTheme'] {
-  background: var(--darkBackgroundColor);
-  color: var(--darkFont);
+body[data-theme='NightTheme'] {
+  background: var(--nightBackgroundColor);
+  color: var(--nightFont);
+}
+
+body[data-theme='VaporTheme'] {
+  background: var(--vaporBackgroundColor);
+  color: var(--vaporFont);
 }

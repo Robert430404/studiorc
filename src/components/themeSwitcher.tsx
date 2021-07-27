@@ -6,8 +6,9 @@ import JSXFactory from 'core/jsx';
 import { ThemeButton } from 'components/themeButton';
 
 export enum Themes {
-  Dark = 'DarkTheme',
-  Light = 'LightTheme',
+  Day = 'DayTheme',
+  Night = 'NightTheme',
+  Vapor = 'VaporTheme',
 }
 
 enum ClassNames {
@@ -23,16 +24,16 @@ const isTheme = (x: unknown): x is Themes => {
     return false;
   }
 
-  return Themes.Dark === x || Themes.Light === x;
+  return Themes.Night === x || Themes.Day === x || Themes.Vapor === x;
 };
 
 export const getActiveTheme = (): Themes => {
   const { value } = getCookie(ThemeCookie.Name);
 
   if (!isTheme(value)) {
-    setActiveTheme(Themes.Dark);
+    setActiveTheme(Themes.Night);
 
-    return Themes.Dark;
+    return Themes.Night;
   }
 
   return value;
@@ -48,8 +49,9 @@ export const setActiveTheme = (theme: Themes): void => {
 const ThemeSwitcher = () => {
   return (
     <section classes={[ClassNames.Block]}>
-      <ThemeButton theme={Themes.Light}>l</ThemeButton>
-      <ThemeButton theme={Themes.Dark}>d</ThemeButton>
+      <ThemeButton theme={Themes.Day}>Day</ThemeButton>
+      <ThemeButton theme={Themes.Night}>Night</ThemeButton>
+      <ThemeButton theme={Themes.Vapor}>Vapor</ThemeButton>
     </section>
   );
 };
