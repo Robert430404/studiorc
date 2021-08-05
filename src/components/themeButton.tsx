@@ -10,6 +10,7 @@ enum ClassNames {
 
 interface Properties {
   theme: Themes;
+  classes?: string[];
 }
 
 export const ThemeButton = (props: Properties) => {

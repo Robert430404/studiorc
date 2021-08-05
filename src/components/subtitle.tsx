@@ -9,6 +9,7 @@ import Blinker from 'components/blinker';
 enum ClassNames {
   Block = 'SubTitle',
   Bold = 'SubTitle--bold',
+  Input = 'SubTitle__input',
 }
 
 const config = {
@@ -23,6 +24,7 @@ const config = {
 
 const SubTitle = () => {
   const [newHobby, setNewHobby] = useState<string | null>(null);
+  const [currentHobby, setCurrentHobby] = useState<string>('');
   const [container, setContainer] = useState<HTMLElement | null>(null);
 
   const getInsertionDelay = () => {
@@ -34,9 +36,8 @@ const SubTitle = () => {
   const getHobby = (): string => {
     const found =
       config.hobbies[Math.floor(Math.random() * config.hobbies.length)];
-    const container = getHobbyContainer();
 
-    if (found === container?.textContent) {
+    if (found === getState<string>(currentHobby)) {
       return getHobby();
     }
 
@@ -90,9 +91,10 @@ const SubTitle = () => {
       return;
     }
 
-    setNewHobby(getHobby());
+    hobby = getHobby();
 
-    hobby = getState<string>(newHobby);
+    setNewHobby(hobby);
+    setCurrentHobby(hobby);
 
     container.textContent = hobby.slice(0, textContent.length + 1);
 
@@ -102,6 +104,8 @@ const SubTitle = () => {
   const handleHobby = () => {
     const container = getHobbyContainer();
     const hobby = getHobby();
+
+    setCurrentHobby(hobby);
 
     if (container?.textContent?.length > 0) {
       handleDeletion();
@@ -121,10 +125,12 @@ const SubTitle = () => {
   return (
     <h2 classes={[ClassNames.Block]}>
       Just a simple guy who enjoys{' '}
-      <span id={config.hobbyId} classes={[ClassNames.Bold]}>
-        {handleHobby()}
+      <span classes={[ClassNames.Input, ClassNames.Bold]}>
+        <span id={config.hobbyId} classes={[ClassNames.Bold]}>
+          {handleHobby()}
+        </span>
+        <Blinker />
       </span>
-      <Blinker />
       <br />
       and hanging with my wife and kids.
     </h2>

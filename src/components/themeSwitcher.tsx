@@ -4,6 +4,11 @@ import { getCookie, setCookie } from 'core/cookies';
 import JSXFactory from 'core/jsx';
 
 import { ThemeButton } from 'components/themeButton';
+import { Tooltip, TooltipPosition } from 'components/tooltip';
+
+import './../images/cpu.svg';
+import './../images/moon.svg';
+import './../images/sun.svg';
 
 export enum Themes {
   Day = 'DayTheme',
@@ -13,6 +18,9 @@ export enum Themes {
 
 enum ClassNames {
   Block = 'ThemeSwitcher',
+  Icon = 'ThemeButton_icon',
+  First = 'ThemeButton--first',
+  Last = 'ThemeButton--last',
 }
 
 enum ThemeCookie {
@@ -49,9 +57,30 @@ export const setActiveTheme = (theme: Themes): void => {
 const ThemeSwitcher = () => {
   return (
     <section classes={[ClassNames.Block]}>
-      <ThemeButton theme={Themes.Day}>Day</ThemeButton>
-      <ThemeButton theme={Themes.Night}>Night</ThemeButton>
-      <ThemeButton theme={Themes.Vapor}>Vapor</ThemeButton>
+      <Tooltip
+        content="Daylight"
+        position={[TooltipPosition.Top, TooltipPosition.Center]}
+      >
+        <ThemeButton theme={Themes.Day} classes={[ClassNames.First]}>
+          <img classes={[ClassNames.Icon]} src="images/sun.svg" />
+        </ThemeButton>
+      </Tooltip>
+      <Tooltip
+        content="Vapor Wave"
+        position={[TooltipPosition.Top, TooltipPosition.Center]}
+      >
+        <ThemeButton theme={Themes.Vapor}>
+          <img classes={[ClassNames.Icon]} src="images/cpu.svg" />
+        </ThemeButton>
+      </Tooltip>
+      <Tooltip
+        content="Night"
+        position={[TooltipPosition.Top, TooltipPosition.Center]}
+      >
+        <ThemeButton theme={Themes.Night} classes={[ClassNames.Last]}>
+          <img classes={[ClassNames.Icon]} src="images/moon.svg" />
+        </ThemeButton>
+      </Tooltip>
     </section>
   );
 };

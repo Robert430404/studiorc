@@ -35,6 +35,7 @@ declare global {
       footer: JSXElement;
       nav: JSXElement;
       span: JSXElement;
+      img: JSXElement;
       h1: JSXElement;
       h2: JSXElement;
       br: JSXElement;
@@ -102,6 +103,10 @@ class JSXFactory {
       if (prop === 'classes' && isClassList(value)) {
         value.forEach((cssClass) => element.classList.add(cssClass));
 
+        return;
+      }
+
+      if (prop === 'content') {
         return;
       }
 

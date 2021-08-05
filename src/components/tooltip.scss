@@ -1,0 +1,54 @@
+:root {
+  --tooltipBackground: rgba(255, 255, 255, 0.35);
+  --tooltipColor: #000;
+  --tooltipShadow: rgba(00, 00, 00, 0.75);
+}
+
+.Tooltip {
+  &__container {
+    &:hover {
+      .Tooltip__content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__content {
+    font-size: 22px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    background: var(--tooltipBackground);
+    color: var(--tooltipColor);
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px var(--tooltipShadow);
+    text-align: center;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 10px;
+      border: 10px solid transparent;
+      border-top-color: var(--tooltipBackground);
+    }
+
+    &--center:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--right:before {
+      left: auto;
+      right: 10px;
+    }
+  }
+}

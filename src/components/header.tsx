@@ -6,8 +6,8 @@ import Title from 'components/title';
 
 enum ClassNames {
   Block = 'Header',
-  Title = 'Header_title',
-  SubTitle = 'Header_subTitle',
+  Title = 'Header__title',
+  SubTitle = 'Header__subTitle',
 }
 
 const Header = () => {
