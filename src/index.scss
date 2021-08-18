@@ -4,23 +4,23 @@
 }
 
 :root {
-  /* Dark Theme settings */
-  --nightBackgroundColor: #0b0b0b;
-  --nightFont: #00c020;
-  --nightFontHighLight: #06ff2f;
+  /* Mainframe Theme settings */
+  --mainframeBackgroundColor: #0b0b0b;
+  --mainframeFont: #00c020;
+  --mainframeFontHighLight: #ffffff;
   --darkTextShadow: 2px 2px 0px #000;
 
-  /* Light Theme settings */
-  --dayBackgroundColor: #ecedee;
-  --dayFont: #1b1b1b;
-  --dayFontHighLight: #3b3b3b;
-  --lightTextShadow: 2px 2px 0px #000;
+  /* Bright Theme settings */
+  --brightBackgroundColor: #ecedee;
+  --brightFont: #1b1b1b;
+  --brightFontHighLight: #3b3b3b;
+  --brightTestShadow: 2px 2px 0px #000;
 
-  /* Light Theme settings */
-  --vaporBackgroundColor: #01cdfe;
-  --vaporFont: #1b1b1b;
-  --vaporFontHighLight: #ff71ce;
-  --vaporTextShadow: 2px 2px 0px #000;
+  /* Hotline Theme settings */
+  --hotBackgroundColor: #2b2b2b;
+  --hotFont: #ff71ce;
+  --hotFontHighLight: #01cdfe;
+  --hotTextShadow: 2px 2px 0px #000;
 
   /* Layout settings */
   --fontSize: 24px;
@@ -38,8 +38,8 @@ html {
 }
 
 body {
-  background: var(--nightBackgroundColor);
-  color: var(--nightFont);
+  background: var(--mainframeBackgroundColor);
+  color: var(--mainframeFont);
   font-family: 'VT323', monospace;
   text-align: left;
   display: grid;
@@ -49,17 +49,17 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-body[data-theme='DayTheme'] {
-  background: var(--dayBackgroundColor);
-  color: var(--dayFont);
+body[data-theme='BrightTheme'] {
+  background: var(--brightBackgroundColor);
+  color: var(--brightFont);
 }
 
-body[data-theme='NightTheme'] {
-  background: var(--nightBackgroundColor);
-  color: var(--nightFont);
+body[data-theme='MainframeTheme'] {
+  background: var(--mainframeBackgroundColor);
+  color: var(--mainframeFont);
 }
 
-body[data-theme='VaporTheme'] {
-  background: var(--vaporBackgroundColor);
-  color: var(--vaporFont);
+body[data-theme='HotTheme'] {
+  background: var(--hotBackgroundColor);
+  color: var(--hotFont);
 }

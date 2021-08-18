@@ -1,20 +1,20 @@
 :root {
-  --dayThemeButtonBackground: rgba(255, 255, 255, 0.35);
-  --nightThemeButtonBackground: rgba(00, 00, 00, 0.15);
-  --vaporThemeButtonBackground: rgba(1, 205, 254, 0.35);
-  --dayThemeButtonColor: var(--dayFont);
-  --nightThemeButtonColor: var(--nightFont);
-  --vaporThemeButtonColor: var(--vaporFont);
+  --BrightThemeButtonBackground: rgba(255, 255, 255, 0.35);
+  --MainframeThemeButtonBackground: rgba(00, 00, 00, 0.15);
+  --HotThemeButtonBackground: rgba(254, 1, 178, 0.35);
+  --BrightThemeButtonColor: var(--brightFont);
+  --MainframeThemeButtonColor: var(--mainframeFont);
+  --HotThemeButtonColor: var(--hotFont);
   --boxShadow: 0 0 10px rgba(00, 00, 00, 0.5);
 }
 
 .ThemeButton {
   min-width: 30px;
   min-height: 30px;
-  background-color: var(--nightThemeButtonBackground);
+  background-color: var(--MainframeThemeButtonBackground);
   border: none;
   display: block;
-  color: var(--nightThemeButtonColor);
+  color: var(--MainframeThemeButtonColor);
   text-transform: uppercase;
   text-align: center;
   border-radius: 0;
@@ -35,14 +35,14 @@
     border-radius: 0 12px 12px 0;
   }
 
-  &[data-theme='DayTheme'] {
-    background-color: var(--dayThemeButtonBackground);
-    color: var(--dayThemeButtonColor);
+  &[data-theme='BrightTheme'] {
+    background-color: var(--BrightThemeButtonBackground);
+    color: var(--BrightThemeButtonColor);
   }
 
-  &[data-theme='VaporTheme'] {
-    background-color: var(--vaporThemeButtonBackground);
-    color: var(--vaporThemeButtonColor);
+  &[data-theme='HotTheme'] {
+    background-color: var(--HotThemeButtonBackground);
+    color: var(--HotThemeButtonColor);
   }
 
   &__icon {

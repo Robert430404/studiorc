@@ -11,14 +11,14 @@ import './../images/moon.svg';
 import './../images/sun.svg';
 
 export enum Themes {
-  Day = 'DayTheme',
-  Night = 'NightTheme',
-  Vapor = 'VaporTheme',
+  Bright = 'BrightTheme',
+  Mainframe = 'MainframeTheme',
+  Hot = 'HotTheme',
 }
 
 enum ClassNames {
   Block = 'ThemeSwitcher',
-  Icon = 'ThemeButton_icon',
+  Icon = 'ThemeButton__icon',
   First = 'ThemeButton--first',
   Last = 'ThemeButton--last',
 }
@@ -32,16 +32,16 @@ const isTheme = (x: unknown): x is Themes => {
     return false;
   }
 
-  return Themes.Night === x || Themes.Day === x || Themes.Vapor === x;
+  return Themes.Mainframe === x || Themes.Bright === x || Themes.Hot === x;
 };
 
 export const getActiveTheme = (): Themes => {
   const { value } = getCookie(ThemeCookie.Name);
 
   if (!isTheme(value)) {
-    setActiveTheme(Themes.Night);
+    setActiveTheme(Themes.Mainframe);
 
-    return Themes.Night;
+    return Themes.Mainframe;
   }
 
   return value;
@@ -58,27 +58,27 @@ const ThemeSwitcher = () => {
   return (
     <section classes={[ClassNames.Block]}>
       <Tooltip
-        content="Daylight"
+        content="Bright"
         position={[TooltipPosition.Top, TooltipPosition.Center]}
       >
-        <ThemeButton theme={Themes.Day} classes={[ClassNames.First]}>
+        <ThemeButton theme={Themes.Bright} classes={[ClassNames.First]}>
           <img classes={[ClassNames.Icon]} src="images/sun.svg" />
         </ThemeButton>
       </Tooltip>
       <Tooltip
-        content="Vapor Wave"
+        content="Hotline"
         position={[TooltipPosition.Top, TooltipPosition.Center]}
       >
-        <ThemeButton theme={Themes.Vapor}>
-          <img classes={[ClassNames.Icon]} src="images/cpu.svg" />
+        <ThemeButton theme={Themes.Hot}>
+          <img classes={[ClassNames.Icon]} src="images/moon.svg" />
         </ThemeButton>
       </Tooltip>
       <Tooltip
-        content="Night"
+        content="Mainframe"
         position={[TooltipPosition.Top, TooltipPosition.Center]}
       >
-        <ThemeButton theme={Themes.Night} classes={[ClassNames.Last]}>
-          <img classes={[ClassNames.Icon]} src="images/moon.svg" />
+        <ThemeButton theme={Themes.Mainframe} classes={[ClassNames.Last]}>
+          <img classes={[ClassNames.Icon]} src="images/cpu.svg" />
         </ThemeButton>
       </Tooltip>
     </section>
