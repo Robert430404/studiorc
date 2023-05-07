@@ -1,0 +1,8 @@
+spec:
+  name: studiorc
+  static_sites:
+    - environment_slug: html
+      git:
+        branch: main
+        repo_clone_url: studiorc
+      name: studiorc
