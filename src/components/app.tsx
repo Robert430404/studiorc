@@ -19,7 +19,7 @@ const App = () => {
   if (!body) {
     throw Error('Something is very wrong, there is no body');
   }
-  console.log('test');
+
   body.classList.add(ClassNames.CRT);
   body.style.removeProperty('background');
   body.dataset.theme = getActiveTheme();
