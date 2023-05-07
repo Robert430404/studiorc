@@ -1,14 +1,11 @@
-import 'components/themeSwitcher.scss';
-
-import { getCookie, setCookie } from 'core/cookies';
-import JSXFactory from 'core/jsx';
-
-import { ThemeButton } from 'components/themeButton';
-import { Tooltip, TooltipPosition } from 'components/tooltip';
-
+import { getCookie, setCookie } from '../core/cookies';
+import JSXFactory from '../core/jsx';
 import './../images/cpu.svg';
 import './../images/moon.svg';
 import './../images/sun.svg';
+import { ThemeButton } from './themeButton';
+import './themeSwitcher.scss';
+import { Tooltip, TooltipPosition } from './tooltip';
 
 export enum Themes {
   Bright = 'BrightTheme',

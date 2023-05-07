@@ -1,4 +1,4 @@
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
 
 export enum ClassNames {
   Block = 'Label',

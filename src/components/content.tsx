@@ -1,9 +1,7 @@
-import 'components/content.scss';
-
-import JSXFactory from 'core/jsx';
-
-import ByLine from 'components/byline';
-import ExternalLinks from 'components/externalLinks';
+import JSXFactory from '../core/jsx';
+import ByLine from './byline';
+import './content.scss';
+import ExternalLinks from './externalLinks';
 
 enum ClassNames {
   Block = 'Content',

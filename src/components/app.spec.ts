@@ -1,6 +1,6 @@
 import { JSDOM } from 'jsdom';
 
-import App from 'components/app';
+import App from './app';
 
 describe('App', () => {
   beforeEach(() => {

@@ -1,9 +1,7 @@
-import 'components/externalLinks.scss';
-
-import JSXFactory from 'core/jsx';
-
-import Label, { ClassNames as LabelClassNames } from 'components/label';
-import SocialLink from 'components/socialLink';
+import JSXFactory from '../core/jsx';
+import './externalLinks.scss';
+import Label, { ClassNames as LabelClassNames } from './label';
+import SocialLink from './socialLink';
 
 enum ClassNames {
   Block = 'ExternalLinks',

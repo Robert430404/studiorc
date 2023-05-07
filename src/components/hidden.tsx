@@ -1,15 +1,13 @@
-import 'components/hidden.scss';
-
-import { getState, useState } from 'core/hooks/state';
-import { generateId } from 'core/ids';
-import JSXFactory from 'core/jsx';
+import { getState, useState } from '../core/hooks/state';
+import { generateId } from '../core/ids';
+import JSXFactory from '../core/jsx';
 import {
   getTouchDirection,
   StartCoordinates,
   TouchDirections,
-} from 'core/touch';
-
-import Video from 'components/video';
+} from '../core/touch';
+import './hidden.scss';
+import Video from './video';
 
 type EnteredSequence = string[];
 

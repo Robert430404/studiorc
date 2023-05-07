@@ -1,8 +1,6 @@
-import 'components/header.scss';
-
-import JSXFactory from 'core/jsx';
-
-import Title from 'components/title';
+import JSXFactory from '../core/jsx';
+import './header.scss';
+import Title from './title';
 
 enum ClassNames {
   Block = 'Header',

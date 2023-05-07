@@ -1,5 +1,5 @@
 const path = require('path');
-const tsTransformPaths = require('@zerollup/ts-transform-paths');
+const pathsTransformer = require('ts-transform-paths').default;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -28,14 +28,7 @@ module.exports = {
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
-          getCustomTransformers: (program) => {
-            const transformer = tsTransformPaths(program);
-
-            return {
-              before: [transformer.before],
-              afterDeclarations: [transformer.afterDeclarations],
-            };
-          },
+          getCustomTransformers: (program) => pathsTransformer(),
         },
       },
       {

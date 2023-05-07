@@ -1,6 +1,5 @@
-import 'components/socialLink.scss';
-
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
+import './socialLink.scss';
 
 enum ClassNames {
   Block = 'SocialLink',

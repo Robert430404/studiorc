@@ -1,6 +1,5 @@
-import 'components/byline.scss';
-
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
+import './byline.scss';
 
 enum ClassNames {
   Block = 'ByLine',

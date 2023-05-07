@@ -1,6 +1,5 @@
-import JSXFactory from 'core/jsx';
-
-import Copyright from 'components/copyright';
+import JSXFactory from '../core/jsx';
+import Copyright from './copyright';
 
 enum ClassNames {
   Block = 'Footer',

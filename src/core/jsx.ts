@@ -3,7 +3,7 @@ import {
   ElementEvents,
   isDataAttribute,
   isClassList,
-} from 'core/guards/jsxGuards';
+} from '../core/guards/jsxGuards';
 
 // Defines the interface for a JSX element
 interface JSXElement {

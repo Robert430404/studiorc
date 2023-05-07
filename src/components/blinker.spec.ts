@@ -1,6 +1,6 @@
 import { JSDOM } from 'jsdom';
 
-import Blinker from 'components/blinker';
+import Blinker from './blinker';
 
 describe('Blinker', () => {
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
 
 enum ClassNames {
   Block = 'Copyright',

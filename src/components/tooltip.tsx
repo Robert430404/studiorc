@@ -1,6 +1,5 @@
-import 'components/tooltip.scss';
-
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
+import './tooltip.scss';
 
 enum ClassNames {
   Container = 'Tooltip__container',

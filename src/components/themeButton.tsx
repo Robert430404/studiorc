@@ -1,8 +1,6 @@
-import 'components/themeButton.scss';
-
-import JSXFactory from 'core/jsx';
-
-import { setActiveTheme, Themes } from 'components/themeSwitcher';
+import JSXFactory from '../core/jsx';
+import './themeButton.scss';
+import { setActiveTheme, Themes } from './themeSwitcher';
 
 enum ClassNames {
   Block = 'ThemeButton',

@@ -1,6 +1,5 @@
-import JSXFactory from 'core/jsx';
-
-import { ClassNames } from 'components/hidden';
+import JSXFactory from '../core/jsx';
+import { ClassNames } from './hidden';
 
 const Video = (): HTMLIFrameElement => {
   return (

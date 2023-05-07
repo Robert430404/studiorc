@@ -1,10 +1,8 @@
-import 'components/subtitle.scss';
-
-import { getState, useState } from 'core/hooks/state';
-import { generateId } from 'core/ids';
-import JSXFactory from 'core/jsx';
-
-import Blinker from 'components/blinker';
+import { getState, useState } from '../core/hooks/state';
+import { generateId } from '../core/ids';
+import JSXFactory from '../core/jsx';
+import Blinker from './blinker';
+import './subtitle.scss';
 
 enum ClassNames {
   Block = 'SubTitle',

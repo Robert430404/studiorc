@@ -1,6 +1,5 @@
-import 'components/blinker.scss';
-
-import JSXFactory from 'core/jsx';
+import JSXFactory from '../core/jsx';
+import './blinker.scss';
 
 enum ClassNames {
   Block = 'Blink',

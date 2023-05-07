@@ -1,13 +1,11 @@
-import 'components/app.scss';
-
-import JSXFactory from 'core/jsx';
-
-import Content from 'components/content';
-import Footer from 'components/footer';
-import Header from 'components/header';
-import Hidden, { Keys } from 'components/hidden';
-import SubTitle from 'components/subtitle';
-import ThemeSwitcher, { getActiveTheme } from 'components/themeSwitcher';
+import JSXFactory from '../core/jsx';
+import './app.scss';
+import Content from './content';
+import Footer from './footer';
+import Header from './header';
+import Hidden, { Keys } from './hidden';
+import SubTitle from './subtitle';
+import ThemeSwitcher, { getActiveTheme } from './themeSwitcher';
 
 enum ClassNames {
   Block = 'App',
@@ -21,7 +19,7 @@ const App = () => {
   if (!body) {
     throw Error('Something is very wrong, there is no body');
   }
-
+  console.log('test');
   body.classList.add(ClassNames.CRT);
   body.style.removeProperty('background');
   body.dataset.theme = getActiveTheme();
