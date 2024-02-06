@@ -1,8 +1,0 @@
-dist
-node_modules
-package.json
-package-lock.json
-coverage
-.nyc-output
-docker
-*.md

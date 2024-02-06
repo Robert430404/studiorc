@@ -1,15 +1,11 @@
 {
-  "compilerOptions": {
-    "jsx": "react",
-    "jsxFactory": "JSXFactory.CreateJSXComponent",
-    "outDir": "./public/dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "allowJs": true,
-    "sourceMap": true,
-    "plugins": [{ "transform": "@zerollup/ts-transform-paths" }],
-    "baseUrl": "./src"
-  },
-  "exclude": ["webpack.*.js", "public/dist", "*.spec.*"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
 }
