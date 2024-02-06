@@ -1,8 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FrameVue from './components/FrameVue.vue'
+</script>
 
 <template>
-  <main class="app app--crt">app</main>
+  <main class="app app--crt">
+    <frame-vue></frame-vue>
+  </main>
 </template>
+
+<style>
+body {
+  font-family: monospace;
+  font-size: 18px;
+
+  background: #0b0b0b;
+  color: #2ecf71;
+
+  & * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+</style>
 
 <style scoped>
 @keyframes flicker {
@@ -205,7 +225,7 @@
 }
 
 .app--crt::before {
-  content: " ";
+  content: ' ';
   display: block;
   position: absolute;
   top: 0;
@@ -213,12 +233,7 @@
   bottom: 0;
   right: 0;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
-    );
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
   z-index: 2;
   background-size:
     100% 2px,
@@ -227,7 +242,7 @@
 }
 
 .app--crt::after {
-  content: " ";
+  content: ' ';
   display: block;
   position: absolute;
   top: 0;
