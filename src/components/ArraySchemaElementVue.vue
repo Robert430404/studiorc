@@ -118,6 +118,10 @@ const handleTogglingExpansion = () => {
     &--expanded:after {
       display: none;
     }
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 
   &__group {

@@ -35,7 +35,7 @@ const elements = getIterableSchema()
 
 <style scoped lang="scss">
 .about {
-  font-size: 1.5rem;
+  font-size: 1.25em;
 
   &__bracket {
     color: #777;

@@ -11,7 +11,7 @@ import FrameVue from './components/FrameVue.vue'
 <style>
 body {
   font-family: monospace;
-  font-size: 18px;
+  font-size: 20px;
 
   background: #0b0b0b;
   color: #2ecf71;
@@ -20,6 +20,12 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
   }
 }
 </style>
