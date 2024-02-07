@@ -12,8 +12,8 @@ defineProps<{
       'schemaKey--context': isContext
     }"
   >
-    "{{ jsonKey }}"
-  </span>
+    "{{ jsonKey }}"</span
+  >
 </template>
 
 <style scoped lang="scss">

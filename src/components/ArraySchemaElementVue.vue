@@ -80,9 +80,6 @@ const handleTogglingExpansion = () => {
     top: 4px;
     height: 12px;
     width: 12px;
-    text-align: center;
-    font-weight: bold;
-    color: #999;
     background: transparent;
     padding: 0;
     margin: 0;
