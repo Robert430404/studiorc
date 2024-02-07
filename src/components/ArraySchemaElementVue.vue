@@ -30,6 +30,13 @@ const handleTogglingExpansion = () => {
 
 <template>
   <div class="arraySchemaElement">
+    <button
+      :class="{
+        arraySchemaElement__toggle: true,
+        'arraySchemaElement__toggle--expanded': isExpanded
+      }"
+      @click="handleTogglingExpansion"
+    ></button>
     <schema-key-vue :json-key="jsonKey" :is-context="false" />:
     <span
       v-if="!isExpanded"
@@ -64,7 +71,54 @@ const handleTogglingExpansion = () => {
 
 <style scoped lang="scss">
 .arraySchemaElement {
+  position: relative;
   padding-left: 2ch;
+
+  &__toggle {
+    position: absolute;
+    left: 0;
+    top: calc(6px);
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: #eee;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.25;
+    }
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 3px;
+      height: 2px;
+      width: 8px;
+      background: #eee;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 3px;
+      left: calc(50% - 1px);
+      height: 8px;
+      width: 2px;
+      background: #eee;
+    }
+
+    &--expanded:after {
+      display: none;
+    }
+  }
 
   &__group {
     padding-left: 2ch;
