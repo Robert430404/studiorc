@@ -13,12 +13,6 @@ import AboutVue from './AboutVue.vue'
 
 <style scoped lang="scss">
 .frame {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
   display: flex;
   justify-content: center;
   padding: 24px;

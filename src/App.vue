@@ -233,7 +233,7 @@ body {
 .app--crt::before {
   content: ' ';
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -250,7 +250,7 @@ body {
 .app--crt::after {
   content: ' ';
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
