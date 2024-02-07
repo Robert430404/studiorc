@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import FrameVue from './components/FrameVue.vue'
+import AboutVue from './components/AboutVue.vue'
 </script>
 
 <template>
   <main class="app app--crt">
-    <frame-vue></frame-vue>
+    <div class="app__contents">
+      <h1 class="app__heading">Response - [GET] 200 text/html</h1>
+      <about-vue></about-vue>
+    </div>
   </main>
 </template>
 
 <style>
 body {
-  font-family: monospace;
-  font-size: 20px;
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  font-size: 16px;
 
   background: #0b0b0b;
   color: #2ecf71;
@@ -30,7 +33,7 @@ body {
 }
 </style>
 
-<style scoped>
+<style scoped lang="scss">
 @keyframes flicker {
   0% {
     opacity: 0.27861;
@@ -260,5 +263,22 @@ body {
   z-index: 2;
   pointer-events: none;
   animation: flicker 0.15s infinite;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+
+  &__contents {
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    gap: 24px;
+    padding: 24px 0;
+    flex-direction: column;
+  }
+  &__heading {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+  }
 }
 </style>

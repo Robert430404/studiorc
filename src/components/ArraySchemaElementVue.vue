@@ -77,16 +77,16 @@ const handleTogglingExpansion = () => {
   &__toggle {
     position: absolute;
     left: 0;
-    top: calc(6px);
-    height: 16px;
-    width: 16px;
+    top: 4px;
+    height: 12px;
+    width: 12px;
     text-align: center;
     font-weight: bold;
-    color: #eee;
+    color: #999;
     background: transparent;
     padding: 0;
     margin: 0;
-    border: 1px solid #eee;
+    border: 1px solid #999;
     cursor: pointer;
     opacity: 1;
     transition: all 0.3s;
@@ -99,20 +99,20 @@ const handleTogglingExpansion = () => {
       content: ' ';
       position: absolute;
       top: calc(50% - 1px);
-      left: 3px;
+      left: 0;
       height: 2px;
-      width: 8px;
-      background: #eee;
+      width: 10px;
+      background: #999;
     }
 
     &:after {
       content: ' ';
       position: absolute;
-      top: 3px;
+      top: 0;
       left: calc(50% - 1px);
-      height: 8px;
+      height: 10px;
       width: 2px;
-      background: #eee;
+      background: #999;
     }
 
     &--expanded:after {

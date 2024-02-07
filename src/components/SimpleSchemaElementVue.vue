@@ -39,31 +39,31 @@ const shouldHaveEmphasis = (value: string): boolean => {
 </script>
 
 <template>
-  <div class="simpleSchemaElement">
+  <span class="simpleSchemaElement">
     <schema-key-vue :json-key="jsonKey" :is-context="isContext" />:
-    <span class="simpleSchemaElement__value"
-      >"<a
-        v-if="isUrl(jsonValue)"
-        target="_blank"
-        :href="jsonValue"
-        :class="{
-          simpleSchemaElement__value: true,
-          simpleSchemaElement__link: true,
-          'simpleSchemaElement__link--emphasize': shouldHaveEmphasis(jsonValue)
-        }"
-      >
-        {{ jsonValue }}
-      </a>
-      <span
-        v-else
-        :class="{
-          simpleSchemaElement__value: true,
-          'simpleSchemaElement__value--muted': isContext
-        }"
-        >{{ jsonValue }}</span
-      >"</span
+    <a
+      v-if="isUrl(jsonValue)"
+      target="_blank"
+      :href="jsonValue"
+      :class="{
+        simpleSchemaElement__value: true,
+        'simpleSchemaElement__value--muted': isContext,
+        simpleSchemaElement__link: true,
+        'simpleSchemaElement__link--emphasize': shouldHaveEmphasis(jsonValue)
+      }"
+    >
+      "{{ jsonValue }}"</a
+    >
+    <span
+      v-else
+      :class="{
+        simpleSchemaElement__value: true,
+        'simpleSchemaElement__value--muted': isContext
+      }"
+    >
+      "{{ jsonValue }}"</span
     ><span v-if="hasComma">,</span>
-  </div>
+  </span>
 </template>
 
 <style scoped lang="scss">
@@ -80,7 +80,7 @@ const shouldHaveEmphasis = (value: string): boolean => {
 
   &__link {
     color: #888;
-    font-weight: bold;
+    font-style: italic;
 
     &--emphasize {
       color: #eee;

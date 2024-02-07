@@ -19,7 +19,7 @@ defineProps<{
 <style scoped lang="scss">
 .schemaKey {
   color: #00ff6a;
-  font-weight: bold;
+  font-weight: 600;
 
   &--context {
     color: #080;

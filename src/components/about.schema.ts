@@ -119,12 +119,8 @@ export const getIterableSchema = (): SchemaElement[] => {
         type: SchemaElementTypes.Array,
         isContext: key.includes('@')
       })
-
-      console.log(results)
     }
   }
-
-  console.log(transformed)
 
   return transformed
 }
