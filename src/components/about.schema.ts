@@ -1,5 +1,5 @@
 // This is a valid JSON-LD schema for myself
-const schema = {
+const schema: Record<string, string | Record<string, string>[]> = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Robert Joseph Cox Jr.',
@@ -86,7 +86,7 @@ const transformSimpleSchemaElement = (key: string, value: string): SchemaElement
   }
 }
 
-const transofrmArraySchemaElement = (objects: object[]): SchemaElement[] => {
+const transofrmArraySchemaElement = (objects: Record<string, string>[]): SchemaElement[] => {
   const transformed: SchemaElement[] = []
 
   objects.forEach((object) => {
