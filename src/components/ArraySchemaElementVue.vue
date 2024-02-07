@@ -58,7 +58,7 @@ const handleTogglingExpansion = () => {
           :json-key="child.key"
           :json-value="child.value"
           :is-context="child.isContext"
-          :has-comma="index + 1 !== children.length"
+          :has-comma="(index + 1) % groupLength !== 0"
         ></simple-schema-element-vue>
         <div v-if="(index + 1) % groupLength === 0 && index !== 0">
           <closed-bracket-vue /><span v-if="index + 1 !== children.length">,</span>
