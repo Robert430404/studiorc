@@ -18,7 +18,7 @@ const isUrl = (value: string): boolean => {
     new URL(value)
 
     return true
-  } catch (e) {
+  } catch {
     return false
   }
 }
@@ -32,7 +32,7 @@ const shouldHaveEmphasis = (value: string): boolean => {
     }
 
     return true
-  } catch (e) {
+  } catch {
     return false
   }
 }

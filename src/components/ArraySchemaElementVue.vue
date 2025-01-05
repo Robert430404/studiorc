@@ -40,17 +40,17 @@ const handleTogglingExpansion = () => {
     <schema-key-vue :json-key="jsonKey" :is-context="false" />:
     <span
       v-if="!isExpanded"
-      @click="handleTogglingExpansion"
       class="arraySchemaElement__collapsedArray"
+      @click="handleTogglingExpansion"
     >
       [...]<span v-if="hasComma">,</span>
     </span>
     <span v-else
       ><open-bracket-vue :is-square="true" />
       <div
-        class="arraySchemaElement__group"
         v-for="(child, index) in children"
         :key="child.key + Math.floor(Math.random() * 9999)"
+        class="arraySchemaElement__group"
       >
         <div v-if="index % groupLength === 0"><open-bracket-vue /></div>
         <simple-schema-element-vue

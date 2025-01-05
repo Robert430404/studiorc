@@ -10,9 +10,9 @@ const elements = getIterableSchema()
   <section class="about">
     <span class="about__bracket about__bracket--open">{</span>
     <div
-      class="about__record about__record--indent"
       v-for="(element, index) in elements"
       :key="element.key"
+      class="about__record about__record--indent"
     >
       <simple-schema-element-vue
         v-if="typeof element.value === 'string'"
