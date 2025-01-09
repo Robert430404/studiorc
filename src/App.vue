@@ -12,6 +12,11 @@ import AboutVue from './components/AboutVue.vue'
 </template>
 
 <style>
+html {
+  scrollbar-color: #0b0b0b #2ecf71;
+  scrollbar-width: thin;
+}
+
 body {
   font-family: 'Courier Prime', 'Courier New', Courier, monospace;
   font-size: 16px;

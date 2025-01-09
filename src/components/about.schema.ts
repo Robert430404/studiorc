@@ -86,7 +86,7 @@ const transformSimpleSchemaElement = (key: string, value: string): SchemaElement
   }
 }
 
-const transofrmArraySchemaElement = (objects: Record<string, string>[]): SchemaElement[] => {
+const transformArraySchemaElement = (objects: Record<string, string>[]): SchemaElement[] => {
   const transformed: SchemaElement[] = []
 
   objects.forEach((object) => {
@@ -111,7 +111,7 @@ export const getIterableSchema = (): SchemaElement[] => {
     }
 
     if (Array.isArray(value)) {
-      const results = transofrmArraySchemaElement(value)
+      const results = transformArraySchemaElement(value)
 
       transformed.push({
         key,
