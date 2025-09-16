@@ -7,7 +7,7 @@ const schema: Record<string, string | Record<string, string>[]> = {
   familyName: 'Cox',
   gender: 'male',
   affiliation: 'EngagedMD',
-  jobTitle: 'Engineering Manager',
+  jobTitle: 'Staff Software Engineer',
   callSign: 'robert430404',
   url: 'https://www.studiorclv.com',
   identifier: [
