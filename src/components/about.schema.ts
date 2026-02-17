@@ -13,13 +13,13 @@ const schema: Record<string, string | Record<string, string>[]> = {
   identifier: [
     {
       '@context': 'https://schema.org',
-      '@type': 'URL',
+      '@type': 'PropertyValue',
       name: 'Github',
       url: 'https://github.com/robert430404'
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'URL',
+      '@type': 'PropertyValue',
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/robert430404/'
     }
